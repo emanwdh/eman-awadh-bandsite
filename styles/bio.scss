@@ -14,11 +14,19 @@
         height: 20px;
         width: 120px;
     }
+
+    &__logo {
+        height: 4em;
+        display:flex;
+        align-items:center;
+    }
     &__nav {
+        align-items:center;
         display: flex;
-        height: 2em;
+        justify-content: center;
+        height: 3em;
         width: 100%;
-        @include font-type($regular, 32px, 24px, $Silver);
+        @include font-type($demi, 22px, 1.4rem, $Silver);
     }
 
     &__banner{
@@ -29,13 +37,55 @@
         width: 100%;
         height: 20em;
         color: $White;
+        padding-left: 2em;
+    }
+
+    &__banner h1 {
+        @include font-type ($bold,32px, 2.4rem,$White);
     }
 }
 
 
-ul {
+ul li {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
+.section {
+    display:flex;
+    flex-direction: column;
+    padding: 3em 2em;
+    justify-content:center;
+    gap: 1.5em;
+
+    &__title {
+        @include font-type($bold, 32px, 2.4rem, $Bandsite-DarkBlack);
+    }
+
+    &__quote {
+        @include font-type($demi, 22px, 1.4rem, $Bandsite-DarkBlack);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        text-align:left;
+        gap: 1.5em;
+    }
+}
+
+
+.photo-gallery__group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.quote__speaker {
+    @include font-type($demi, 22px, 1.4rem, $Bandsite-DarkBlack);
+
+}
 

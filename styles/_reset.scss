@@ -1,3 +1,5 @@
+@import './partials/variables';
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -5,6 +7,7 @@
   * {
     margin: 0;
     padding: 0;
+    font-size: 10px;
   }
 
   img, picture, video, canvas, svg {
@@ -16,7 +19,25 @@
     list-style: none;
   }
 
-  a {
-    color: inherit; 
+  li a {
     text-decoration: inherit;
+    padding-bottom: 0.5em;
   }
+
+/*li  a:hover, a:active {
+          color: $White;
+          border-bottom: 3px solid $White;
+    
+  }
+ Use this for navigation besides mobile*/
+li a {
+ color: $Mercury; 
+}
+ 
+ li:hover, li:active {
+  border-bottom: 5px solid $White;
+ }
+
+ li a:hover, a:active {
+  color: $White;
+ }
