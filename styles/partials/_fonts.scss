@@ -1,0 +1,21 @@
+@import "./_variables";
+
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
+    font-weight: $regular; 
+}
+
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
+    font-weight: $demi; 
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
+    font-weight: $bold; 
+}
