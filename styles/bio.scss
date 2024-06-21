@@ -111,6 +111,11 @@ ul li a {
     gap: 1.5em;
 
     &__body {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
         @include tablet {
             padding: 2rem 6rem;
             height: 90rem;
