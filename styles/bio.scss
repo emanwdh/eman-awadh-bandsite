@@ -29,6 +29,12 @@
             align-items: center;
             padding-left: 4rem;
         }
+        @include desktop {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 10rem;
+        }
     
 
         & ul {
@@ -45,9 +51,24 @@
         
             }
 
+
+            @include desktop {
+                display: flex;
+                width: 40%;
+                justify-content: center;
+                gap: 2em;
+        
+            }
+
             & li {
                 @include tablet {
                     width: 30%;
+            
+                }
+
+                @include desktop{
+                    width: 30%;
+                    padding-top: 4rem;
             
                 }
             }
@@ -68,12 +89,21 @@
         @include tablet {
             height: 40rem;
         }
+
+        @include desktop {
+            padding-left: 10rem;
+            height: 60rem;
+        }
     }
 
     &__banner h1 {
         @include font-type ($bold,3.2rem, 2.4rem,$White);
 
         @include tablet {
+            @include font-type($bold, 6.8rem, 6rem,$White);
+        }
+
+        @include desktop {
             @include font-type($bold, 6.8rem, 6rem,$White);
         }
     }
@@ -86,10 +116,7 @@ ul li {
     width: 50%;
     height: 100%;
 
-    @include tablet {
-        position: relative;
-
-    }
+   
 }
 
 ul li a {
@@ -100,6 +127,11 @@ ul li a {
     top: 4rem;
 
     }
+
+    @include desktop {
+        position: absolute;
+        top: 4rem;    
+        }
 }
 
 
@@ -110,14 +142,26 @@ ul li a {
     justify-content:center;
     gap: 1.5em;
 
+    @include desktop {
+        padding: 4rem 10rem;
+    }
+
     &__body {
 
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        
+
         @include tablet {
             padding: 2rem 6rem;
+            height: 70rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        @include desktop {
+            padding: 2rem 13rem;
             height: 90rem;
             display: flex;
             flex-direction: column;
@@ -132,6 +176,11 @@ ul li a {
         @include tablet {
             height: 32rem;
         }
+
+        @include desktop {
+            height: 45rem;
+        }
+    
     
     }
 
@@ -139,6 +188,10 @@ ul li a {
         @include font-type($bold, 3.2rem, 2.4rem, $Bandsite-DarkBlack);
 
         @include tablet {
+            @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
+        }
+
+        @include desktop {
             @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
         }
     }
@@ -150,12 +203,21 @@ ul li a {
             @include font-type($demi,3.2rem, 2.4rem, $Bandsite-DarkBlack);
         }
 
+        @include desktop {
+            @include font-type($demi,3.2rem, 2.4rem, $Bandsite-DarkBlack);
+            padding-right: 11rem;
+        }
+
     }
 
     &__subtitle {
         @include font-type($demi,2.2rem,1.4rem,$Bandsite-DarkBlack);
 
         @include tablet {
+            @include font-type($demi, 3.2rem,2.4rem,$Bandsite-DarkBlack);
+        }
+
+        @include desktop {
             @include font-type($demi, 3.2rem,2.4rem,$Bandsite-DarkBlack);
         }
     }
@@ -177,11 +239,19 @@ ul li a {
     @include tablet {
         flex-direction: row;
     }
+    @include desktop {
+        flex-direction: row;
+        gap: 4rem;
+    }
 
     &__text {
         @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
 
         @include tablet {
+            @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
+        }
+
+        @include desktop {
             @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
         }
     }
@@ -198,10 +268,21 @@ ul li a {
     @include tablet {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     & img {
         @include tablet {
+            width: 30%;
+        }
+
+        @include desktop {
             width: 30%;
         }
     }
@@ -215,6 +296,11 @@ ul li a {
         @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
     }
 
+    @include desktop {
+        @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
+    }
+
+
 }
 
 .footer {
@@ -222,11 +308,16 @@ ul li a {
     display: flex;
     flex-direction: column;
     padding: 4rem 4rem;
-    gap: 2em;
+    gap: 4rem;
 
     @include tablet {
         position: relative;
     }
+
+    @include desktop {
+        position: relative;
+    }
+
 
 
     &__title {
@@ -235,6 +326,11 @@ ul li a {
         @include tablet {
             @include font-type($bold,4.4rem, 3.6rem, $White);
         }
+
+        @include desktop {
+            @include font-type($bold,4.4rem, 3.6rem, $White);
+        }
+
     }
     
     &__socials {
@@ -258,7 +354,13 @@ ul li a {
             display: flex;
             justify-content: space-between;
         }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
     }
+    
 
     &__info {
         display: flex;
@@ -284,10 +386,19 @@ ul li a {
         right: 3rem;
         top: 5rem;
         }
+
+        @include desktop {
+            position: absolute;
+            right: 3rem;
+            top: 5rem;
+            }
     }
 
     &__copyright {
         @include font-type($regular,1.8rem,1.3rem,$White);
 
+
     }
+    
+
 }
