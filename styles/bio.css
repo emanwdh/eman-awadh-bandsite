@@ -44,6 +44,7 @@ ul li {
 li a {
   text-decoration: inherit;
   padding-bottom: 0.5em;
+  color: #E1E1E1;
 }
 
 /*li  a:hover, a:active {
@@ -52,16 +53,17 @@ li a {
 
   }
  Use this for navigation besides mobile*/
-li a {
-  color: #E1E1E1;
-}
-
 li:hover, li:active {
   border-bottom: 0.3rem solid #FFFFFF;
 }
 
 li a:hover, a:active {
   color: #FFFFFF;
+}
+
+.logo {
+  height: 20px;
+  width: 120px;
 }
 
 /*Primary Colors*/
@@ -115,10 +117,6 @@ li a:hover, a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.header__logo img {
-  height: 20px;
-  width: 120px;
 }
 .header__logo {
   height: 4em;
@@ -232,4 +230,45 @@ ul li a {
 
 .footer {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 4em;
+  gap: 2em;
+}
+.footer__title {
+  font-family: Avenir Next;
+  font-weight: 700;
+  line-height: 3.2rem;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+.footer__socials {
+  display: flex;
+  gap: 3em;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.footer__info p:first-child {
+  font-family: Avenir Next;
+  font-weight: 700;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+}
+.footer__info p {
+  font-family: Avenir Next;
+  font-weight: 400;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+}
+.footer__copyright {
+  font-family: Avenir Next;
+  font-weight: 400;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */

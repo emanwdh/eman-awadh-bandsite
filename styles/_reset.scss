@@ -23,6 +23,7 @@
   li a {
     text-decoration: inherit;
     padding-bottom: 0.5em;
+    color: $Mercury; 
   }
 
 /*li  a:hover, a:active {
@@ -31,9 +32,6 @@
     
   }
  Use this for navigation besides mobile*/
-li a {
- color: $Mercury; 
-}
  
  li:hover, li:active {
   border-bottom: 0.3rem solid $White;
@@ -41,4 +39,9 @@ li a {
 
  li a:hover, a:active {
   color: $White;
+ }
+
+ .logo {
+  height: 20px;
+  width: 120px;
  }
