@@ -110,22 +110,49 @@ ul li a {
     justify-content:center;
     gap: 1.5em;
 
+    &__body {
+        @include tablet {
+            padding: 2rem 6rem;
+            height: 90rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+    }
+
     &__image {
         width: 100%;
         height: 25rem;
+
+        @include tablet {
+            height: 32rem;
+        }
     
     }
 
     &__title {
         @include font-type($bold, 3.2rem, 2.4rem, $Bandsite-DarkBlack);
+
+        @include tablet {
+            @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
+        }
     }
 
     &__quote {
         @include font-type($demi, 2.2rem, 1.4rem, $Bandsite-DarkBlack);
+
+        @include tablet {
+            @include font-type($demi,3.2rem, 2.4rem, $Bandsite-DarkBlack);
+        }
+
     }
 
     &__subtitle {
         @include font-type($demi,2.2rem,1.4rem,$Bandsite-DarkBlack);
+
+        @include tablet {
+            @include font-type($demi, 3.2rem,2.4rem,$Bandsite-DarkBlack);
+        }
     }
 
     &__photo-gallery {
@@ -134,14 +161,24 @@ ul li a {
     
 }
 
+
+
 .body {
     display: flex;
     flex-direction: column;
     text-align:left;
     gap: 1.5em;
 
+    @include tablet {
+        flex-direction: row;
+    }
+
     &__text {
         @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
+
+        @include tablet {
+            @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
+        }
     }
     
 
@@ -152,11 +189,26 @@ ul li a {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    & img {
+        @include tablet {
+            width: 30%;
+        }
+    }
 }
 
 
 .quote__speaker {
     @include font-type($demi, 2.2rem, 1.4rem, $Bandsite-DarkBlack);
+
+    @include tablet {
+        @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
+    }
 
 }
 
@@ -167,14 +219,40 @@ ul li a {
     padding: 4rem 4rem;
     gap: 2em;
 
+    @include tablet {
+        position: relative;
+    }
+
+
     &__title {
         @include font-type($bold, 3.2rem, 2.4rem, $White);
+
+        @include tablet {
+            @include font-type($bold,4.4rem, 3.6rem, $White);
+        }
     }
     
-
     &__socials {
-        display: flex;
+        display:flex;
         gap: 3em;
+    }
+
+    & .socials {
+        display: flex;
+        align-items: center;
+        gap: 3em;
+        
+        & img {
+            max-width: 100%;
+            max-height: 2.5rem;
+        }
+    }
+
+    &__contact {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__info {
@@ -191,6 +269,15 @@ ul li a {
         & p {
             @include font-type($regular,1.8rem,1.3rem,$White);
 
+        }
+    }
+    
+    &__logo {
+
+        @include tablet {
+        position: absolute;
+        right: 3rem;
+        top: 5rem;
         }
     }
 
