@@ -16,6 +16,11 @@
     max-width: 100%;
   }
 
+  body {
+
+    display: flex;
+    flex-direction: column;
+  }
   ul li {
     list-style: none;
   }
