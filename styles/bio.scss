@@ -1,8 +1,5 @@
 @import './_reset.scss' , './partials/_fonts', './partials/_mixins', './partials/_variables';
 
-* {
-    font-family: 'Avenir Next';
-}
 
 .header {
     background-color: $BandsiteBlack;
@@ -76,15 +73,17 @@
         }
     }
 
-    &__banner{
+    & .banner{
         background-image: url(../Assets/Images/hero-bio.jpg);
         background-size: cover;
+        background-position: center;
         display: flex;
         align-items:center;
         width: 100%;
-        height: 25em;
+        height: 25rem;
         color: $White;
         padding-left: 4rem;
+        position: relative;
 
         @include tablet {
             height: 40rem;
@@ -94,19 +93,40 @@
             padding-left: 10rem;
             height: 60rem;
         }
+
+        &__overlay {
+            background-color: rgba(50, 50, 50, 0.50);
+            width: 100%;
+            height: 25rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items:center;
+            padding-left: 4rem;
+
+            @include tablet {
+                height: 40rem;
+            }
+    
+            @include desktop {
+                padding-left: 10rem;
+                height: 60rem;
+            }
+        }
     }
 
-    &__banner h1 {
-        @include font-type ($bold,3.2rem, 2.4rem,$White);
+        & h1 {
+            @include font-type ($bold,3.2rem, 2.4rem,$White);
 
-        @include tablet {
-            @include font-type($bold, 6.8rem, 6rem,$White);
-        }
+            @include tablet {
+                @include font-type($bold, 6.8rem, 6rem,$White);
+            }
 
-        @include desktop {
-            @include font-type($bold, 6.8rem, 6rem,$White);
+            @include desktop {
+                @include font-type($bold, 6.8rem, 6rem,$White);
+            }
         }
-    }
 }
 
 

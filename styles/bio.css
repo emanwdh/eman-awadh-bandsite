@@ -30,6 +30,7 @@
   margin: 0;
   padding: 0;
   font-size: 10px;
+  font-family: "Avenir Next";
 }
 
 img, picture, video, canvas, svg {
@@ -134,10 +135,6 @@ li a:hover, li a:active {
 /*Primary Colors*/
 /*Secondary Colors*/
 /*Font*/
-* {
-  font-family: "Avenir Next";
-}
-
 .header {
   background-color: #323232;
   display: flex;
@@ -206,28 +203,52 @@ li a:hover, li a:active {
     padding-top: 4rem;
   }
 }
-.header__banner {
+.header .banner {
   background-image: url(../Assets/Images/hero-bio.jpg);
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 25em;
+  height: 25rem;
   color: #FFFFFF;
   padding-left: 4rem;
+  position: relative;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header__banner {
+  .header .banner {
     height: 40rem;
   }
 }
 @media (min-width: 1280px) {
-  .header__banner {
+  .header .banner {
     padding-left: 10rem;
     height: 60rem;
   }
 }
-.header__banner h1 {
+.header .banner__overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  width: 100%;
+  height: 25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .header .banner__overlay {
+    height: 40rem;
+  }
+}
+@media (min-width: 1280px) {
+  .header .banner__overlay {
+    padding-left: 10rem;
+    height: 60rem;
+  }
+}
+.header h1 {
   font-family: Avenir Next;
   font-weight: 700;
   line-height: 3.2rem;
@@ -235,7 +256,7 @@ li a:hover, li a:active {
   color: #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header__banner h1 {
+  .header h1 {
     font-family: Avenir Next;
     font-weight: 700;
     line-height: 6.8rem;
@@ -244,7 +265,7 @@ li a:hover, li a:active {
   }
 }
 @media (min-width: 1280px) {
-  .header__banner h1 {
+  .header h1 {
     font-family: Avenir Next;
     font-weight: 700;
     line-height: 6.8rem;
