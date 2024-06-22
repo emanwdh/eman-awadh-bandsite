@@ -58,6 +58,12 @@
             }
 
             & li {
+
+                display: flex;
+                justify-content: center;
+                width: 50%;
+                height: 100%;
+
                 @include tablet {
                     width: 30%;
             
@@ -67,6 +73,22 @@
                     width: 30%;
                     padding-top: 4rem;
             
+                }
+
+                & a {
+
+                    @include font-type($demi, 2.2rem, 1.4rem, $Silver);
+
+                    @include tablet {
+                    position: absolute;
+                    top: 4rem;
+                
+                    }
+                
+                    @include desktop {
+                        position: absolute;
+                        top: 4rem;    
+                        }
                 }
             }
 
@@ -130,29 +152,6 @@
 }
 
 
-ul li {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-
-   
-}
-
-ul li a {
-    @include font-type($demi, 2.2rem, 1.4rem, $Silver);
-
-    @include tablet {
-    position: absolute;
-    top: 4rem;
-
-    }
-
-    @include desktop {
-        position: absolute;
-        top: 4rem;    
-        }
-}
 
 
 .section {
@@ -244,9 +243,50 @@ ul li a {
         }
     }
 
-    &__photo-gallery {
+    & .photo-gallery {
         background-color: $Alabaster;
         flex-grow:2;
+    
+
+        &__group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        
+            & img {
+                filter: grayscale(1);
+                transition: .4s;
+            }
+        
+            & img:hover {
+                filter: none;
+                transform: scale(1.05);
+                z-index: 1;
+            }
+        
+            @include tablet {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        
+            @include desktop {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        
+            & img {
+                @include tablet {
+                    width: 30%;
+                }
+        
+                @include desktop {
+                    width: 30%;
+                }
+            }
+        
+        }
     }
     
 }
@@ -283,44 +323,6 @@ ul li a {
 }
 
 
-.photo-gallery__group {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-
-    & img {
-        filter: grayscale(1);
-        transition: .4s;
-    }
-
-    & img:hover {
-        filter: none;
-        transform: scale(1.05);
-        z-index: 1;
-    }
-
-    @include tablet {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    @include desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    & img {
-        @include tablet {
-            width: 30%;
-        }
-
-        @include desktop {
-            width: 30%;
-        }
-    }
-}
 
 
 .quote__speaker {
@@ -437,5 +439,5 @@ ul li a {
 
     }
     
-
 }
+
