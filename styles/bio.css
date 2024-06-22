@@ -583,7 +583,8 @@ ul li a {
 }
 .footer__socials {
   display: flex;
-  gap: 3em;
+  flex-direction: column;
+  gap: 2em;
 }
 .footer .socials {
   display: flex;

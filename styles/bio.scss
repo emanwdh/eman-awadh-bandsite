@@ -369,7 +369,8 @@ ul li a {
     
     &__socials {
         display:flex;
-        gap: 3em;
+        flex-direction: column;
+        gap: 2em;
     }
 
     & .socials {
