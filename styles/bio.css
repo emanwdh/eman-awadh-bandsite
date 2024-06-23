@@ -43,6 +43,12 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
 ul li {
   list-style: none;
 }
