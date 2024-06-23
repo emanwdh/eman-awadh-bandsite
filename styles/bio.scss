@@ -113,7 +113,8 @@
         }
 
         @include desktop {
-            padding-left: 10rem;
+            padding-left: 3.6rem;
+            padding-right: 3.6rem;
             height: 60rem;
         }
 
@@ -133,7 +134,8 @@
             }
     
             @include desktop {
-                padding-left: 10rem;
+                padding-left: 3.6rem;
+                padding-right: 3.6rem;
                 height: 60rem;
             }
         }
@@ -164,7 +166,7 @@
     gap: 1.6em;
 
     @include desktop {
-        padding: 4rem 10rem;
+        padding: 3.6rem 3.6rem;
     }
 
     &__body {
@@ -181,10 +183,10 @@
         }
 
         @include desktop {
-            padding: 2em 13em;
+            padding: 3.6rem 3.6rem;
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 3.6rem;
             flex-grow:2;
         }
     }
@@ -217,6 +219,7 @@
 
         @include desktop {
             @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
+            padding-top: 1.2rem;
         }
     }
 
@@ -273,7 +276,7 @@
             }
             @include desktop {
                 flex-direction: row;
-                gap: 4rem;
+                gap: 3.6rem;
             }
         
             &__text {
@@ -295,6 +298,13 @@
 
 .photo-gallery {
     background-color: $Alabaster;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    @include desktop {
+        gap: 3.6rem;
+    }
 
 
     &__group {
@@ -323,6 +333,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            gap: 3.6rem;
         }
     
         & img {
@@ -352,6 +363,8 @@
 
     @include desktop {
         position: relative;
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
     }
 
 
@@ -366,6 +379,7 @@
 
         @include desktop {
             @include font-type($bold,4.4rem, 3.6rem, $White);
+            padding-top: 1.2rem;
         }
 
     }
@@ -374,18 +388,44 @@
         display:flex;
         flex-direction: column;
         gap: 2rem;
-    }
 
-    & .socials {
-        display: flex;
-        align-items: center;
-        gap: 3rem;
+        @include tablet {
+           
+            flex-direction: row;
+            align-items: center;
+            padding-top: 1.2rem;
+            gap: 5rem;
+        }
+
+        @include desktop {
+            
+            flex-direction: row;
+            align-items: center;
+            padding-top: 1.2rem;
+            gap: 5rem;
+        }
+
+        & .socials {
+            display: flex;
+            gap: 3rem;
+            
+            & img {
+                max-width: 100%;
+                max-height: 2.5rem;
+
+                
+                
+            }
         
-        & img {
-            max-width: 100%;
-            max-height: 2.5rem;
+        @include tablet {
+            padding-top: 1.2rem;
+
+        }
+
+        @include desktop {
+            padding-top: 1.2rem;
             
-            
+        }
         }
     }
 
@@ -393,15 +433,19 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 1.6rem;
+        gap: 3rem;
         @include tablet {
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10rem;
         }
 
         @include desktop {
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10rem;
         }
     }
     
@@ -433,8 +477,8 @@
 
         @include desktop {
             position: absolute;
-            right: 3rem;
-            top: 5rem;
+            right: 3.6rem;
+            top: 4.8rem;
             }
     }
 
