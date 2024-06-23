@@ -1,4 +1,4 @@
-@import './_global.scss' , './partials/_fonts', './partials/_mixins', './partials/_variables';
+@import './_global' , './partials/_fonts', './partials/_mixins', './partials/_variables';
 
 
 .header {
@@ -104,7 +104,8 @@
         width: 100%;
         height: 25rem;
         color: $White;
-        padding-left: 4rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
         position: relative;
 
         @include tablet {
@@ -125,7 +126,7 @@
             left: 0;
             display: flex;
             align-items:center;
-            padding-left: 4rem;
+            padding-left: 1.6rem;
 
             @include tablet {
                 height: 40rem;
@@ -158,9 +159,9 @@
 .section {
     display:flex;
     flex-direction: column;
-    padding: 4rem 4rem;
+    padding: 1.6rem 1.6rem;
     justify-content:center;
-    gap: 1.5em;
+    gap: 1.6em;
 
     @include desktop {
         padding: 4rem 10rem;
@@ -170,7 +171,7 @@
 
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.6rem;
 
         @include tablet {
             padding: 2em 6em;
@@ -208,6 +209,7 @@
 
     &__title {
         @include font-type($bold, 3.2rem, 2.4rem, $Bandsite-DarkBlack);
+        padding-top: 0.8rem;
 
         @include tablet {
             @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
@@ -257,58 +259,14 @@
         }
     }
 
-    & .photo-gallery {
-        background-color: $Alabaster;
-        flex-grow:2;
     
-
-        &__group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5em;
-        
-            & img {
-                filter: grayscale(1);
-                transition: .4s;
-            }
-        
-            & img:hover {
-                filter: none;
-                transform: scale(1.05);
-                z-index: 1;
-            }
-        
-            @include tablet {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
-        
-            @include desktop {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
-        
-            & img {
-                @include tablet {
-                    width: 30%;
-                }
-        
-                @include desktop {
-                    width: 30%;
-                }
-            }
-        
-        }
-    }
     & .section__body {
     
         & .body {
             display: flex;
             flex-direction: column;
             text-align:left;
-            gap: 1.5em;
+            gap: 1.6rem;
         
             @include tablet {
                 flex-direction: row;
@@ -335,12 +293,57 @@
     }
 }
 
+.photo-gallery {
+    background-color: $Alabaster;
+
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    
+        & img {
+            filter: grayscale(1);
+            transition: .4s;
+        }
+    
+        & img:hover {
+            filter: none;
+            transform: scale(1.05);
+            z-index: 1;
+        }
+    
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    
+        @include desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    
+        & img {
+            @include tablet {
+                width: 30%;
+            }
+    
+            @include desktop {
+                width: 30%;
+            }
+        }
+    
+    }
+}
+
 
 .footer {
     background-color:$BandsiteBlack;
     display: flex;
     flex-direction: column;
-    padding: 4rem 4rem;
+    padding: 1.6rem 1.6rem;
     gap: 4rem;
 
     @include tablet {
@@ -355,6 +358,7 @@
 
     &__title {
         @include font-type($bold, 3.2rem, 2.4rem, $White);
+        padding-top:0.8rem;
 
         @include tablet {
             @include font-type($bold,4.4rem, 3.6rem, $White);
@@ -369,13 +373,13 @@
     &__socials {
         display:flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 2rem;
     }
 
     & .socials {
         display: flex;
         align-items: center;
-        gap: 3em;
+        gap: 3rem;
         
         & img {
             max-width: 100%;
@@ -386,6 +390,10 @@
     }
 
     &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.6rem;
         @include tablet {
             display: flex;
             justify-content: space-between;
@@ -401,7 +409,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 1.2rem;
 
 
         & p:first-child {
