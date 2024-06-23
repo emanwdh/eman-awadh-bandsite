@@ -24,22 +24,12 @@
   }
   ul li {
     list-style: none;
-  }
 
-  li a {
-    text-decoration: inherit;
-    color: $Mercury; 
-  }
+    &:hover, 
+    &:active {
 
-/*li  a:hover, a:active {
-          color: $White;
-          border-bottom: 3px solid $White;
-    
-  }
- Use this for navigation besides mobile*/
- 
- li:hover, li:active {
-  border-bottom: 0.3rem solid $White;
+      border-bottom: 0.3rem solid $White;
+
     @include tablet {
       border-bottom: none;
     }
@@ -47,22 +37,30 @@
     @include desktop {
       border-bottom: none;
     }
- }
 
- li a:hover,li a:active {
-  color: $White;
+    }
+    a {
+      text-decoration: inherit;
+      color: $Mercury; 
+    }
 
-  @include tablet {
-    border-bottom: 0.3rem solid $White;
-    padding-bottom: 3.5rem;
+    a:hover, 
+    a:active {
+
+      color: $White;
+
+      @include tablet {
+        border-bottom: 0.3rem solid $White;
+        padding-bottom: 3.5rem;
+      }
+    
+      @include desktop {
+        border-bottom: 0.3rem solid $White;
+        padding-bottom: 3.5rem;
+      }
+
+    }
   }
-
-  @include desktop {
-    border-bottom: 0.3rem solid $White;
-    padding-bottom: 3.5rem;
-  }
- }
- 
 
  .logo {
   height: 20px;

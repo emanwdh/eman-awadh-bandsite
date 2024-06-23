@@ -95,7 +95,7 @@
         }
     }
 
-    & .banner{
+    & .hero{
         background-image: url(../Assets/Images/hero-bio.jpg);
         background-size: cover;
         background-position: center;
@@ -136,9 +136,8 @@
                 height: 60rem;
             }
         }
-    }
 
-        & h1 {
+        &__title {
             @include font-type ($bold,3.2rem, 2.4rem,$White);
 
             @include tablet {
@@ -149,6 +148,8 @@
                 @include font-type($bold, 6.8rem, 6rem,$White);
             }
         }
+    }
+
 }
 
 
@@ -217,7 +218,7 @@
         }
     }
 
-    &__quote {
+    & .quote {
         @include font-type($demi, 2.2rem, 1.4rem, $Bandsite-DarkBlack);
 
         @include tablet {
@@ -227,6 +228,19 @@
         @include desktop {
             @include font-type($demi,3.2rem, 2.4rem, $Bandsite-DarkBlack);
             padding-right: 11rem;
+        }
+
+        &__speaker {
+            @include font-type($demi, 2.2rem, 1.4rem, $Bandsite-DarkBlack);
+
+            @include tablet {
+                @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
+            }
+        
+            @include desktop {
+                @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
+            }  
+
         }
 
     }
@@ -288,56 +302,39 @@
         
         }
     }
+    & .section__body {
     
-}
-
-
-
-.body {
-    display: flex;
-    flex-direction: column;
-    text-align:left;
-    gap: 1.5em;
-
-    @include tablet {
-        flex-direction: row;
-    }
-    @include desktop {
-        flex-direction: row;
-        gap: 4rem;
-    }
-
-    &__text {
-        @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
-
-        @include tablet {
-            @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
+        & .body {
+            display: flex;
+            flex-direction: column;
+            text-align:left;
+            gap: 1.5em;
+        
+            @include tablet {
+                flex-direction: row;
+            }
+            @include desktop {
+                flex-direction: row;
+                gap: 4rem;
+            }
+        
+            &__text {
+                @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
+        
+                @include tablet {
+                    @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
+                }
+        
+                @include desktop {
+                    @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
+                }
+            }
+            
+        
         }
-
-        @include desktop {
-            @include font-type($regular,2.2rem, 1.4rem, $Bandsite-DarkBlack);
-        }
     }
-    
-
 }
 
-
-
-
-.quote__speaker {
-    @include font-type($demi, 2.2rem, 1.4rem, $Bandsite-DarkBlack);
-
-    @include tablet {
-        @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
-    }
-
-    @include desktop {
-        @include font-type($demi, 1.4rem, 2.2rem, $Bandsite-DarkBlack);
-    }
-
-
-}
 
 .footer {
     background-color:$BandsiteBlack;

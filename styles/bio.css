@@ -46,43 +46,37 @@ body {
 ul li {
   list-style: none;
 }
-
-li a {
-  text-decoration: inherit;
-  color: #E1E1E1;
-}
-
-/*li  a:hover, a:active {
-          color: $White;
-          border-bottom: 3px solid $White;
-
-  }
- Use this for navigation besides mobile*/
-li:hover, li:active {
+ul li:hover, ul li:active {
   border-bottom: 0.3rem solid #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  li:hover, li:active {
+  ul li:hover, ul li:active {
     border-bottom: none;
   }
 }
 @media (min-width: 1280px) {
-  li:hover, li:active {
+  ul li:hover, ul li:active {
     border-bottom: none;
   }
 }
-
-li a:hover, li a:active {
+ul li a {
+  text-decoration: inherit;
+  color: #E1E1E1;
+}
+ul li a:hover,
+ul li a:active {
   color: #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  li a:hover, li a:active {
+  ul li a:hover,
+ul li a:active {
     border-bottom: 0.3rem solid #FFFFFF;
     padding-bottom: 3.5rem;
   }
 }
 @media (min-width: 1280px) {
-  li a:hover, li a:active {
+  ul li a:hover,
+ul li a:active {
     border-bottom: 0.3rem solid #FFFFFF;
     padding-bottom: 3.5rem;
   }
@@ -228,7 +222,7 @@ li a:hover, li a:active {
     top: 4rem;
   }
 }
-.header .banner {
+.header .hero {
   background-image: url(../Assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
@@ -241,17 +235,17 @@ li a:hover, li a:active {
   position: relative;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header .banner {
+  .header .hero {
     height: 40rem;
   }
 }
 @media (min-width: 1280px) {
-  .header .banner {
+  .header .hero {
     padding-left: 10rem;
     height: 60rem;
   }
 }
-.header .banner__overlay {
+.header .hero__overlay {
   background-color: rgba(50, 50, 50, 0.5);
   width: 100%;
   height: 25rem;
@@ -263,17 +257,17 @@ li a:hover, li a:active {
   padding-left: 4rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header .banner__overlay {
+  .header .hero__overlay {
     height: 40rem;
   }
 }
 @media (min-width: 1280px) {
-  .header .banner__overlay {
+  .header .hero__overlay {
     padding-left: 10rem;
     height: 60rem;
   }
 }
-.header h1 {
+.header .hero__title {
   font-family: Avenir Next;
   font-weight: 700;
   line-height: 3.2rem;
@@ -281,7 +275,7 @@ li a:hover, li a:active {
   color: #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header h1 {
+  .header .hero__title {
     font-family: Avenir Next;
     font-weight: 700;
     line-height: 6.8rem;
@@ -290,7 +284,7 @@ li a:hover, li a:active {
   }
 }
 @media (min-width: 1280px) {
-  .header h1 {
+  .header .hero__title {
     font-family: Avenir Next;
     font-weight: 700;
     line-height: 6.8rem;
@@ -373,7 +367,7 @@ li a:hover, li a:active {
     color: #000000;
   }
 }
-.section__quote {
+.section .quote {
   font-family: Avenir Next;
   font-weight: 600;
   line-height: 2.2rem;
@@ -381,7 +375,7 @@ li a:hover, li a:active {
   color: #000000;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .section__quote {
+  .section .quote {
     font-family: Avenir Next;
     font-weight: 600;
     line-height: 3.2rem;
@@ -390,13 +384,38 @@ li a:hover, li a:active {
   }
 }
 @media (min-width: 1280px) {
-  .section__quote {
+  .section .quote {
     font-family: Avenir Next;
     font-weight: 600;
     line-height: 3.2rem;
     font-size: 2.4rem;
     color: #000000;
     padding-right: 11rem;
+  }
+}
+.section .quote__speaker {
+  font-family: Avenir Next;
+  font-weight: 600;
+  line-height: 2.2rem;
+  font-size: 1.4rem;
+  color: #000000;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .section .quote__speaker {
+    font-family: Avenir Next;
+    font-weight: 600;
+    line-height: 1.4rem;
+    font-size: 2.2rem;
+    color: #000000;
+  }
+}
+@media (min-width: 1280px) {
+  .section .quote__speaker {
+    font-family: Avenir Next;
+    font-weight: 600;
+    line-height: 1.4rem;
+    font-size: 2.2rem;
+    color: #000000;
   }
 }
 .section__subtitle {
@@ -466,25 +485,24 @@ li a:hover, li a:active {
     width: 30%;
   }
 }
-
-.body {
+.section .section__body .body {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 1.5em;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .body {
+  .section .section__body .body {
     flex-direction: row;
   }
 }
 @media (min-width: 1280px) {
-  .body {
+  .section .section__body .body {
     flex-direction: row;
     gap: 4rem;
   }
 }
-.body__text {
+.section .section__body .body__text {
   font-family: Avenir Next;
   font-weight: 400;
   line-height: 1.8rem;
@@ -492,7 +510,7 @@ li a:hover, li a:active {
   color: #000000;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .body__text {
+  .section .section__body .body__text {
     font-family: Avenir Next;
     font-weight: 400;
     line-height: 2.2rem;
@@ -501,37 +519,11 @@ li a:hover, li a:active {
   }
 }
 @media (min-width: 1280px) {
-  .body__text {
+  .section .section__body .body__text {
     font-family: Avenir Next;
     font-weight: 400;
     line-height: 2.2rem;
     font-size: 1.4rem;
-    color: #000000;
-  }
-}
-
-.quote__speaker {
-  font-family: Avenir Next;
-  font-weight: 600;
-  line-height: 2.2rem;
-  font-size: 1.4rem;
-  color: #000000;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .quote__speaker {
-    font-family: Avenir Next;
-    font-weight: 600;
-    line-height: 1.4rem;
-    font-size: 2.2rem;
-    color: #000000;
-  }
-}
-@media (min-width: 1280px) {
-  .quote__speaker {
-    font-family: Avenir Next;
-    font-weight: 600;
-    line-height: 1.4rem;
-    font-size: 2.2rem;
     color: #000000;
   }
 }
