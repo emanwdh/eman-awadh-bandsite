@@ -296,7 +296,7 @@
     }
 }
 
-.photo-gallery {
+.gallery-section {
     background-color: $Alabaster;
     display: flex;
     flex-direction: column;
@@ -494,53 +494,57 @@
 
     align-items:center;
 
-    .form-comments {
+    .comment-form {
         display: flex;
         flex-direction: column;
         align-items:center;
         width: 100%;
-    
-        .field {
+        border-bottom: 1px solid $Silver;
+        padding: 2rem 3rem;
+
+        &__name-field {
             display: flex;
             flex-direction: column;
+            
         }
-        
-       .input-field {
-        
-       }
+              
 
     }
 
 
-    .comment__post {
+    .comment {
         display: flex;
         width: 100%;
-        gap: 1rem;
+        gap: 3rem;
         padding: 2rem 3rem;
         border-bottom: 1px solid $Silver;
         position: relative;
 
-        .comment__info-group {
+        .info-group {
             display:flex;
             flex-direction: column;
             gap: 1rem;
             width: 80%;
 
-            p {
+            & p:nth-child(1) {
+                @include font-type($demi,1.8rem,1.3rem,$Bandsite-DarkBlack);
+            }
+
+            & p:nth-child(2) {
                 @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
             }
 
         }
 
-        .comment__image {
+        &__image {
             width: 5rem;
-            height: 3rem;
+            height: 5rem;
             border-radius: 50%;
-            background-color:rgba(50, 50, 50, 0.50);
+            background-color: $Silver;
         }
 
-        .comment__date {
-            @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
+        &__date {
+            @include font-type($regular,1.8rem,1.3rem,$Silver);
             position: absolute;
             right: 1.6rem;
             top: 2rem;

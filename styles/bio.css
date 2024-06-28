@@ -497,40 +497,40 @@ ul li a:active {
   }
 }
 
-.photo-gallery {
+.gallery-section {
   background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
 @media (min-width: 1280px) {
-  .photo-gallery {
+  .gallery-section {
     gap: 3.6rem;
   }
 }
-.photo-gallery__group {
+.gallery-section__group {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.photo-gallery__group img {
+.gallery-section__group img {
   filter: grayscale(1);
   transition: 0.4s;
 }
-.photo-gallery__group img:hover {
+.gallery-section__group img:hover {
   filter: none;
   transform: scale(1.05);
   z-index: 1;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery__group {
+  .gallery-section__group {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
 @media (min-width: 1280px) {
-  .photo-gallery__group {
+  .gallery-section__group {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -538,12 +538,12 @@ ul li a:active {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery__group img {
+  .gallery-section__group img {
     width: 30%;
   }
 }
 @media (min-width: 1280px) {
-  .photo-gallery__group img {
+  .gallery-section__group img {
     width: 30%;
   }
 }
@@ -699,49 +699,58 @@ ul li a:active {
 .comment-section {
   align-items: center;
 }
-.comment-section .form-comments {
+.comment-section .comment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  border-bottom: 1px solid #AFAFAF;
+  padding: 2rem 3rem;
 }
-.comment-section .form-comments .field {
+.comment-section .comment-form__name-field {
   display: flex;
   flex-direction: column;
 }
-.comment-section .comment__post {
+.comment-section .comment {
   display: flex;
   width: 100%;
-  gap: 1rem;
+  gap: 3rem;
   padding: 2rem 3rem;
   border-bottom: 1px solid #AFAFAF;
   position: relative;
 }
-.comment-section .comment__post .comment__info-group {
+.comment-section .comment .info-group {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 80%;
 }
-.comment-section .comment__post .comment__info-group p {
+.comment-section .comment .info-group p:nth-child(1) {
+  font-family: Avenir Next;
+  font-weight: 600;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  color: #000000;
+}
+.comment-section .comment .info-group p:nth-child(2) {
   font-family: Avenir Next;
   font-weight: 400;
   line-height: 1.8rem;
   font-size: 1.3rem;
   color: #000000;
 }
-.comment-section .comment__post .comment__image {
+.comment-section .comment__image {
   width: 5rem;
-  height: 3rem;
+  height: 5rem;
   border-radius: 50%;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: #AFAFAF;
 }
-.comment-section .comment__post .comment__date {
+.comment-section .comment__date {
   font-family: Avenir Next;
   font-weight: 400;
   line-height: 1.8rem;
   font-size: 1.3rem;
-  color: #000000;
+  color: #AFAFAF;
   position: absolute;
   right: 1.6rem;
   top: 2rem;
