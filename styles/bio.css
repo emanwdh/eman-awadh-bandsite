@@ -93,6 +93,15 @@ ul li a:active {
   width: 120px;
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
 /*Primary Colors*/
 /*Secondary Colors*/
 /*Font*/
@@ -699,17 +708,97 @@ ul li a:active {
 .comment-section {
   align-items: center;
 }
+.comment-section__title {
+  align-self: flex-start;
+}
 .comment-section .comment-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   border-bottom: 1px solid #AFAFAF;
+  gap: 2rem;
   padding: 2rem 3rem;
 }
-.comment-section .comment-form__name-field {
+.comment-section .comment-form__user {
+  display: flex;
+  align-items: center;
+}
+.comment-section .comment-form__image {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-top: 3em;
+}
+.comment-section .comment-form .form-section {
   display: flex;
   flex-direction: column;
+  gap: 2em;
+  width: 90%;
+}
+.comment-section .comment-form .form__field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0em 1em;
+  gap: 0.8em;
+  font-family: Avenir Next;
+  font-weight: 600;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  color: #AFAFAF;
+  text-transform: uppercase;
+}
+.comment-section .comment-form .form__field button {
+  margin: 0em;
+  width: 100%;
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border: none;
+}
+.comment-section .comment-form .form__field input {
+  height: 4em;
+  padding: 0em 1em;
+  border: 1px #AFAFAF solid;
+  border-radius: 0.5rem;
+  background-color: #FAFAFA;
+  width: 100%;
+}
+.comment-section .comment-form .form__field input::-moz-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.comment-section .comment-form .form__field input:-ms-input-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.comment-section .comment-form .form__field input::placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.comment-section .comment-form .form__field textarea {
+  padding: 1em 1em;
+  border: 1px #AFAFAF solid;
+  border-radius: 0.5rem;
+  background-color: #FAFAFA;
+  width: 100%;
+}
+.comment-section .comment-form .form__field textarea::-moz-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.comment-section .comment-form .form__field textarea:-ms-input-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.comment-section .comment-form .form__field textarea::placeholder {
+  color: #000000;
+  font-size: 1.3rem;
 }
 .comment-section .comment {
   display: flex;

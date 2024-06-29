@@ -494,18 +494,97 @@
 
     align-items:center;
 
+    &__title {
+        align-self: flex-start;
+    }
+
     .comment-form {
         display: flex;
-        flex-direction: column;
-        align-items:center;
+        align-items:flex-start;
         width: 100%;
         border-bottom: 1px solid $Silver;
+        gap: 2rem;
         padding: 2rem 3rem;
 
-        &__name-field {
+        &__user {
+            display: flex;
+            align-items: center;
+
+        }
+
+        &__image {
+                width: 5em;
+                height: 5em;
+                border-radius: 50%;
+                margin-top: 3em;
+            }
+
+        .form-section {
+                display:flex;
+                flex-direction: column;
+                gap: 2em;
+                width: 90%;
+            
+            }
+    
+        
+
+        & .form__field {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            padding: 0em 1em;
+            gap: 0.8em;
+            @include font-type($demi, 1.8rem, 1.6rem, $Silver);
+            text-transform: uppercase;
+
+            & button {
+                margin: 0em;
+                width: 100%;
+                padding: 1rem 4rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: $White;
+                background-color: $BandsiteBlack;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                font-weight: $demi;
+                border: none;
+                
+            }
+        
             
+             & input {
+                height: 4em;
+                padding: 0em 1em;
+                border: 1px $Silver solid;
+                border-radius: 0.5rem;
+                background-color: $Alabaster;
+                width: 100%;
+              
+                &::placeholder {
+                    color: $Bandsite-DarkBlack;
+                    font-size: 1.3rem;
+
+                }
+
+        
+
+                 
+            }
+            
+            & textarea {
+               padding: 1em 1em;
+               border: 1px $Silver solid;
+               border-radius: 0.5rem;
+               background-color: $Alabaster;
+               width: 100%;
+
+               &::placeholder {
+                color: $Bandsite-DarkBlack;
+                font-size: 1.3rem;
+               }
+            }
         }
               
 
@@ -553,4 +632,9 @@
     }
 
 }
+
+
+// change name to user field instead, with the image 
+
+// try to make comment section consisten from 300px
 
