@@ -1,11 +1,4 @@
-/* <div class = "comment">
-        <span class = "comment__image"></span>
-        <div class = "comment__info info-group">
-            <p class = "info-group__user">Victor Pinto</p>
-            <p class = "info-group__text">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
-        </div>
-        <p class = "comment__date">11/02/2023</p>
-    </div> */
+
 
     //declare DOM Element Selector variables 
 
@@ -27,73 +20,84 @@
 
     //create an array
 
-    let newCommentArray = [];
+    let newCommentArray = [
+        {   Name: "Isaac Tadesse",
+            Comment_Text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+            Time_Stamp: "10/20/2023",
+        },
+        {
+            Name: "Christina Cabrera",
+            Comment_Text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+            Time_Stamp: "10/28/2023"
+        },
+        {
+            Name: "Victor Pinto",
+            Comment_Text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+            Time_Stamp: "11/02/2023",
+        }
+    ];
 
 
     // Add Event Handler 
 
-    function postComment(event) {
+    function displayComment (event) {
         event.preventDefault();
 
         //retrieve values from inputs, including new Date 
         let nameValue = nameInputElement.value;
         let commentValue = commentInputElement.value;
         let newDateValue = new Date();
+      
     
 
-        for(let i = 0; i < 1; i++){
+        //insert values into array and create newObject variable
 
-            //insert values into array 
+        newCommentArray.push({"Name": nameValue, "Comment_Text": commentValue, "Time_Stamp": newDateValue});
+        let arrayIndexValue = (newCommentArray.length) - 1;
+        let newObject = newCommentArray[arrayIndexValue];
 
-            newCommentArray.push({"name": nameValue, "comment": commentValue, "date": newDateValue});
-            console.log(newCommentArray);
-            console.log(newCommentArray[i].date);
+        //take new object and create comment displayed
 
+        function createComment (newObject) {
+            let newCommentContainer = document.createElement('div');
+            newCommentContainer.classList.add("comment");
+            commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
 
+            let newCommentUserImage = document.createElement('span');
+            newCommentUserImage.classList.add("comment__image");
+            newCommentContainer.appendChild(newCommentUserImage);
 
-        //create Elements  and insert values (make more re-usable/dry)
-       
-                let newCommentContainer = document.createElement('div');
-                newCommentContainer.classList.add("comment");
-                commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
-                let newCommentUserImage = document.createElement('span');
-                newCommentUserImage.classList.add("comment__image");
-                newCommentContainer.appendChild(newCommentUserImage);
-                let newCommentUserData = document.createElement('div');
-                newCommentUserData.classList.add("info-group");
-                newCommentContainer.appendChild(newCommentUserData);
-                let newCommentUserName = document.createElement('p');
-                newCommentUserName.classList.add("info-group__user");
-                newCommentUserData.appendChild(newCommentUserName);
-                newCommentUserName.innerHTML= nameValue;
-                let newCommentUserText = document.createElement('p');
-                newCommentUserText.classList.add("info-group__text");
-                newCommentUserData.appendChild(newCommentUserText);
-                newCommentUserText.innerHTML = commentValue;
+            let newCommentUserData = document.createElement('div');
+            newCommentUserData.classList.add("info-group");
+            newCommentContainer.appendChild(newCommentUserData);
 
-                let newCommentDate = document.createElement("p");
-                newCommentDate.classList.add("comment__date");
-                newCommentContainer.appendChild(newCommentDate);
-                newCommentDate.innerHTML = newDateValue.toLocaleDateString();;
+            let newCommentUserName = document.createElement('p');
+            newCommentUserName.classList.add("info-group__user");
+            newCommentUserData.appendChild(newCommentUserName);
+            newCommentUserName.textContent= newObject.Name;
+
+            let newCommentUserText = document.createElement('p');
+            newCommentUserText.classList.add("info-group__text");
+            newCommentUserData.appendChild(newCommentUserText);
+            newCommentUserText.textContent = newObject.Comment_Text;
+    
+            let newCommentDate = document.createElement('p');
+            newCommentDate.classList.add("comment__date");
+            newCommentContainer.appendChild(newCommentDate);
+            newCommentDate.textContent = newObject.Time_Stamp.toLocaleDateString();
+        };
+
+        createComment(newObject);
         
-
-
-
-
-           
-            }
-
-        
-
         //reset form 
         event.target.reset();
 
     };
 
-    formElement.addEventListener("submit", postComment);
 
 
-    //is there a need to place the new comments in a new new-comment section
+    formElement.addEventListener("submit", displayComment);
+
 
 
 
