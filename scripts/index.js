@@ -17,6 +17,7 @@
     const nameInputElement = document.querySelector("#name-input");
     const commentInputElement = document.querySelector("#comment-input");
     const commentSection = document.querySelector(".comment-section");
+    const commentDate = document.querySelector(".comment__date");
 
     //create an array of objects
 
@@ -34,16 +35,19 @@
     function postComment(event) {
         event.preventDefault();
 
-        //retrieve values from inputs 
+        //retrieve values from inputs, including new Date 
         let nameValue = nameInputElement.value;
         let commentValue = commentInputElement.value;
+        let newDateValue = new Date();
+    
 
         for(let i = 0; i < 1; i++){
 
             //insert values into array 
 
-            newCommentArray.push({"name": nameValue, "comment": commentValue});
+            newCommentArray.push({"name": nameValue, "comment": commentValue, "date": newDateValue});
             console.log(newCommentArray);
+            console.log(newCommentArray[i].date);
 
 
 
@@ -66,6 +70,16 @@
                 newCommentUserText.classList.add("info-group__text");
                 newCommentUserData.appendChild(newCommentUserText);
                 newCommentUserText.innerHTML = commentValue;
+
+                let newCommentDate = document.createElement("p");
+                newCommentDate.classList.add("comment__date");
+                newCommentContainer.appendChild(newCommentDate);
+                newCommentDate.innerHTML = newDateValue.toLocaleDateString();;
+        
+
+
+
+
            
             }
 
