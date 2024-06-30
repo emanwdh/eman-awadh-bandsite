@@ -512,6 +512,13 @@
     
         }
 
+        @include desktop {
+            width: 40%;
+            padding-top: 1rem;
+            padding-left: 3rem;
+            padding-right: 0rem;
+        }
+
         &__user {
             display: flex;
             align-items: center;
@@ -575,6 +582,15 @@
                     font-size: 1.6rem;
                     font-weight: $regular;
                 }
+
+                @include desktop {
+                    width: 40%;
+                    align-self:flex-end;
+                    margin-top: 1em;
+                    font-size: 1.6rem;
+                    font-weight: $regular;
+
+                }
                 
             }
         
@@ -591,12 +607,21 @@
                     height: 4em;
                     font-size:1.6rem;
                 }
+
+                @include desktop{
+                    height: 4em;
+                    font-size:1.6rem;
+                }
               
                 &::placeholder {
                     color: $Bandsite-DarkBlack;
                     font-size: 1.3rem;
 
                     @include tablet {
+                        font-size: 1.6rem;
+                    }
+
+                    @include desktop {
                         font-size: 1.6rem;
                     }
 
@@ -619,11 +644,21 @@
                 font-size:1.6rem;
             }
 
+                @include desktop {
+                height: 12rem;
+                font-size:1.6rem;
+            }
+
+
                &::placeholder {
                 color: $Bandsite-DarkBlack;
                 font-size: 1.3rem;
 
                 @include tablet {
+                    font-size: 1.6rem;
+                }
+
+                @include desktop {
                     font-size: 1.6rem;
                 }
                }
@@ -648,6 +683,10 @@
     
         }
 
+        @include desktop {
+            width: 40%;
+        }
+
         .info-group {
             display:flex;
             flex-direction: column;
@@ -664,12 +703,21 @@
                 @include tablet {
                     @include font-type($demi,1.8rem,1.6rem,$Bandsite-DarkBlack);
                 }
+
+                @include desktop {
+                    @include font-type($demi,1.8rem,1.6rem,$Bandsite-DarkBlack);
+                }
+
             }
 
             &__text {
                 @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
 
                 @include tablet {
+                    @include font-type($regular,1.8rem,1.6rem,$Bandsite-DarkBlack);
+                }
+
+                @include desktop {
                     @include font-type($regular,1.8rem,1.6rem,$Bandsite-DarkBlack);
                 }
             }
@@ -692,6 +740,13 @@
             @include tablet {
                 right: 0rem;
                 top: 2rem;
+                @include font-type($regular,3.2rem,1.6rem,$Silver);
+            }
+
+
+            @include desktop{
+                right: 0rem;
+                top: 1.5rem;
                 @include font-type($regular,3.2rem,1.6rem,$Silver);
             }
 

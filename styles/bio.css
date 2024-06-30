@@ -725,6 +725,14 @@ textarea {
     width: 80%;
   }
 }
+@media (min-width: 1280px) {
+  .comment-section .comment-form {
+    width: 40%;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 0rem;
+  }
+}
 .comment-section .comment-form__user {
   display: flex;
   align-items: center;
@@ -787,6 +795,15 @@ textarea {
     font-weight: 400;
   }
 }
+@media (min-width: 1280px) {
+  .comment-section .comment-form .form__field button {
+    width: 40%;
+    align-self: flex-end;
+    margin-top: 1em;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
 .comment-section .comment-form .form__field input {
   height: 4em;
   padding: 0em 1em;
@@ -796,6 +813,12 @@ textarea {
   width: 100%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comment-section .comment-form .form__field input {
+    height: 4em;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
   .comment-section .comment-form .form__field input {
     height: 4em;
     font-size: 1.6rem;
@@ -824,6 +847,17 @@ textarea {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1280px) {
+  .comment-section .comment-form .form__field input::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  .comment-section .comment-form .form__field input:-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  .comment-section .comment-form .form__field input::placeholder {
+    font-size: 1.6rem;
+  }
+}
 .comment-section .comment-form .form__field textarea {
   padding: 1em 1em;
   border: 1px #AFAFAF solid;
@@ -832,6 +866,12 @@ textarea {
   width: 100%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comment-section .comment-form .form__field textarea {
+    height: 12rem;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
   .comment-section .comment-form .form__field textarea {
     height: 12rem;
     font-size: 1.6rem;
@@ -860,6 +900,17 @@ textarea {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1280px) {
+  .comment-section .comment-form .form__field textarea::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  .comment-section .comment-form .form__field textarea:-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  .comment-section .comment-form .form__field textarea::placeholder {
+    font-size: 1.6rem;
+  }
+}
 .comment-section .comment {
   display: flex;
   width: 100%;
@@ -872,6 +923,11 @@ textarea {
   .comment-section .comment {
     width: 80%;
     padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section .comment {
+    width: 40%;
   }
 }
 .comment-section .comment .info-group {
@@ -901,6 +957,15 @@ textarea {
     color: #000000;
   }
 }
+@media (min-width: 1280px) {
+  .comment-section .comment .info-group__user {
+    font-family: Avenir Next;
+    font-weight: 600;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    color: #000000;
+  }
+}
 .comment-section .comment .info-group__text {
   font-family: Avenir Next;
   font-weight: 400;
@@ -909,6 +974,15 @@ textarea {
   color: #000000;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comment-section .comment .info-group__text {
+    font-family: Avenir Next;
+    font-weight: 400;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    color: #000000;
+  }
+}
+@media (min-width: 1280px) {
   .comment-section .comment .info-group__text {
     font-family: Avenir Next;
     font-weight: 400;
@@ -937,6 +1011,17 @@ textarea {
   .comment-section .comment__date {
     right: 0rem;
     top: 2rem;
+    font-family: Avenir Next;
+    font-weight: 400;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    color: #AFAFAF;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section .comment__date {
+    right: 0rem;
+    top: 1.5rem;
     font-family: Avenir Next;
     font-weight: 400;
     line-height: 3.2rem;
