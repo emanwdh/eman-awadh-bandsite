@@ -59,15 +59,16 @@
             <div class = "form-section">
                 <div class = "comment-form__name-field form__field">
                     <label for = "name-input" >Name</label>
-                    <input placeholder = "Enter your name" class = "input-field" id = "name-input">
+                    <input placeholder = "Enter your name" class = "input-field" id = "name-input" name = "nameIinput" required>
                 </div>
                 <div class = "comment-form__comment-field form__field">
                     <label for = "comment-input">Comment</label>
-                    <textarea placeholder = "Add a new comment" class = "input-field" id = "comment-input" rows = "8"></textarea>
+                    <textarea placeholder = "Add a new comment" class = "input-field" id = "comment-input" name = "commentInput"rows = "8" required></textarea>
                     <button type = "submit" class = "comment-form__button form__button">Comment</button>
                 </div>
             </div>
         </form>
+        <div class = "new-comment section"></div>
         <div class = "comment">
             <span class = "comment__image"></span>
             <div class = "comment__info info-group">

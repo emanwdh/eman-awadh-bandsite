@@ -164,6 +164,7 @@
     padding: 1.6rem 1.6rem;
     justify-content:center;
     gap: 1.6em;
+    width: 100%;
 
     @include desktop {
         padding: 3.6rem 3.6rem;
@@ -605,11 +606,11 @@
             gap: 1rem;
             width: 80%;
 
-            & p:nth-child(1) {
+            &__user {
                 @include font-type($demi,1.8rem,1.3rem,$Bandsite-DarkBlack);
             }
 
-            & p:nth-child(2) {
+            &__text {
                 @include font-type($regular,1.8rem,1.3rem,$Bandsite-DarkBlack);
             }
 
@@ -632,6 +633,8 @@
     }
 
 }
+
+
 
 
 // change name to user field instead, with the image 
