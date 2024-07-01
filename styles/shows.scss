@@ -71,6 +71,7 @@
 
     & iframe {
         margin-top: 1rem;
+        width: 100%;
 
         @include tablet {
             margin-top: 6rem;
@@ -88,6 +89,47 @@
 
 }   
 
+.section {
+    padding: 0rem;
+  &__title{
+    font-weight: $demi;
+    padding-left: 1.6rem;
+  }
+}
+
+
+.show {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-bottom: 1px solid $Silver;
+    padding: 1.6rem;
+
+    &__sub-group {
+        display: flex;
+        flex-direction: column;
+        gap:0.3rem;
+
+        .sub-group__title {
+            @include font-type($regular, 1.8rem, 1rem, $Silver);
+            text-transform: uppercase;
+
+        }
+
+        .sub-group__info {
+
+
+            &--bold {
+                font-weight: $demi;
+            }
+
+        }
+    }
+
+
+
+
+}
 
 
 
