@@ -119,26 +119,12 @@
         }
 
         &__overlay {
-            background-color: rgba(50, 50, 50, 0.50);
+            align-items:center;
             width: 100%;
             height: 25rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items:center;
-            padding-left: 1.6rem;
 
-            @include tablet {
-                height: 40rem;
             }
     
-            @include desktop {
-                padding-left: 3.6rem;
-                padding-right: 3.6rem;
-                height: 60rem;
-            }
-        }
 
         &__title {
             @include font-type ($bold,3.2rem, 2.4rem,$White);
@@ -154,7 +140,6 @@
     }
 
 }
-
 
 
 
@@ -735,18 +720,18 @@
             @include font-type($regular,1.8rem,1.3rem,$Silver);
             position: absolute;
             right: 1.6rem;
-            top: 2rem;
+            top: 0rem;
 
             @include tablet {
                 right: 0rem;
-                top: 2rem;
+                top: 1rem;
                 @include font-type($regular,3.2rem,1.6rem,$Silver);
             }
 
 
             @include desktop{
                 right: 0rem;
-                top: 1.5rem;
+                top: 1rem;
                 @include font-type($regular,3.2rem,1.6rem,$Silver);
             }
 
@@ -754,6 +739,7 @@
     }
 
 }
+
 
 
 

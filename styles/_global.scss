@@ -21,6 +21,7 @@
 
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 
   a {
@@ -82,4 +83,281 @@ textarea {
   font-size: 100%; 
   line-height: 1.15; 
   margin: 0; 
+}
+
+.header {
+  background-color: $BandsiteBlack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+      height: 4em;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      padding: 2.5em 0em;
+  }
+  &__nav {
+      display: flex;
+      height: 10em;
+      width: 100%;
+      flex-direction: column;
+
+      @include tablet {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 4rem;
+      }
+      @include desktop {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 10rem;
+      }
+  
+
+      & ul {
+          align-items:center;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+
+          @include tablet {
+              width: 40%;
+              justify-content: center;
+              gap: 2em;
+      
+          }
+
+
+          @include desktop {
+              display: flex;
+              width: 40%;
+              justify-content: center;
+              gap: 2em;
+      
+          }
+
+          & li {
+
+              display: flex;
+              justify-content: center;
+              width: 50%;
+              height: 100%;
+
+              @include tablet {
+                  width: 30%;
+          
+              }
+
+              @include desktop{
+                  width: 30%;
+                  padding-top: 4rem;
+          
+              }
+
+              & a {
+
+                  @include font-type($demi, 2.2rem, 1.4rem, $Silver);
+
+                  @include tablet {
+                  position: absolute;
+                  top: 4rem;
+              
+                  }
+              
+                  @include desktop {
+                      position: absolute;
+                      top: 4rem;    
+                      }
+              }
+          }
+
+      }
+  }
+
+  & .hero{
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items:center;
+      color: $White;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+      position: relative;
+
+      @include tablet {
+          height: 40rem;
+      }
+
+      @include desktop {
+          padding-left: 3.6rem;
+          padding-right: 3.6rem;
+          height: 60rem;
+      }
+
+      &__overlay {
+          background-color: rgba(50, 50, 50, 0.50);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          padding-left: 1.6rem;
+
+          @include tablet {
+              height: 40rem;
+          }
+  
+          @include desktop {
+              padding-left: 3.6rem;
+              padding-right: 3.6rem;
+              height: 60rem;
+          }
+        }
+    
+      }
+
+  }
+
+  .footer {
+    background-color:$BandsiteBlack;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 1.6rem;
+    gap: 4rem;
+
+    @include tablet {
+        position: relative;
+    }
+
+    @include desktop {
+        position: relative;
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
+    }
+
+
+
+    &__title {
+        @include font-type($bold, 3.2rem, 2.4rem, $White);
+        padding-top:0.8rem;
+
+        @include tablet {
+            @include font-type($bold,4.4rem, 3.6rem, $White);
+        }
+
+        @include desktop {
+            @include font-type($bold,4.4rem, 3.6rem, $White);
+            padding-top: 1.2rem;
+        }
+
+    }
+    
+    &__socials {
+        display:flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include tablet {
+           
+            flex-direction: row;
+            align-items: center;
+            padding-top: 1.2rem;
+            gap: 5rem;
+        }
+
+        @include desktop {
+            
+            flex-direction: row;
+            align-items: center;
+            padding-top: 1.2rem;
+            gap: 5rem;
+        }
+
+        & .socials {
+            display: flex;
+            gap: 3rem;
+            
+            & img {
+                max-width: 100%;
+                max-height: 2.5rem;
+
+                
+                
+            }
+        
+        @include tablet {
+            padding-top: 1.2rem;
+
+        }
+
+        @include desktop {
+            padding-top: 1.2rem;
+            
+        }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10rem;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10rem;
+        }
+    }
+    
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+
+        & p:first-child {
+            @include font-type($bold,1.8rem,1.3rem,$White);
+
+        }
+
+        & p {
+            @include font-type($regular,1.8rem,1.3rem,$White);
+
+        }
+    }
+    
+    &__logo {
+
+        @include tablet {
+        position: absolute;
+        right: 3rem;
+        top: 5rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            right: 3.6rem;
+            top: 4.8rem;
+            }
+    }
+
+    &__copyright {
+        @include font-type($regular,1.8rem,1.3rem,$White);
+
+
+    }
+    
 }

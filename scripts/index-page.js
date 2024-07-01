@@ -38,6 +38,37 @@
     ];
 
 
+    function createComment (newObject) {
+        let newCommentContainer = document.createElement('div');
+        newCommentContainer.classList.add("comment");
+        commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
+
+        let newCommentUserImage = document.createElement('span');
+        newCommentUserImage.classList.add("comment__image");
+        newCommentContainer.appendChild(newCommentUserImage);
+
+        let newCommentUserData = document.createElement('div');
+        newCommentUserData.classList.add("info-group");
+        newCommentContainer.appendChild(newCommentUserData);
+
+        let newCommentUserName = document.createElement('p');
+        newCommentUserName.classList.add("info-group__user");
+        newCommentUserData.appendChild(newCommentUserName);
+        newCommentUserName.textContent= newObject.Name;
+
+        let newCommentUserText = document.createElement('p');
+        newCommentUserText.classList.add("info-group__text");
+        newCommentUserData.appendChild(newCommentUserText);
+        newCommentUserText.textContent = newObject.Comment_Text;
+
+        let newCommentDate = document.createElement('p');
+        newCommentDate.classList.add("comment__date");
+        newCommentContainer.appendChild(newCommentDate);
+        newCommentDate.textContent = newObject.Time_Stamp.toLocaleDateString();
+        
+    };
+
+
     // Add Event Handler 
 
     function displayComment (event) {
@@ -58,34 +89,6 @@
 
         //take new object and create comment displayed
 
-        function createComment (newObject) {
-            let newCommentContainer = document.createElement('div');
-            newCommentContainer.classList.add("comment");
-            commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
-
-            let newCommentUserImage = document.createElement('span');
-            newCommentUserImage.classList.add("comment__image");
-            newCommentContainer.appendChild(newCommentUserImage);
-
-            let newCommentUserData = document.createElement('div');
-            newCommentUserData.classList.add("info-group");
-            newCommentContainer.appendChild(newCommentUserData);
-
-            let newCommentUserName = document.createElement('p');
-            newCommentUserName.classList.add("info-group__user");
-            newCommentUserData.appendChild(newCommentUserName);
-            newCommentUserName.textContent= newObject.Name;
-
-            let newCommentUserText = document.createElement('p');
-            newCommentUserText.classList.add("info-group__text");
-            newCommentUserData.appendChild(newCommentUserText);
-            newCommentUserText.textContent = newObject.Comment_Text;
-    
-            let newCommentDate = document.createElement('p');
-            newCommentDate.classList.add("comment__date");
-            newCommentContainer.appendChild(newCommentDate);
-            newCommentDate.textContent = newObject.Time_Stamp.toLocaleDateString();
-        };
 
         createComment(newObject);
         
