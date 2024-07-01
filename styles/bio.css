@@ -206,18 +206,6 @@ textarea {
   padding-right: 1.6rem;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .header .hero {
-    height: 40rem;
-  }
-}
-@media (min-width: 1280px) {
-  .header .hero {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
-    height: 60rem;
-  }
-}
 .header .hero__overlay {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;
@@ -225,18 +213,6 @@ textarea {
   left: 0;
   display: flex;
   padding-left: 1.6rem;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .header .hero__overlay {
-    height: 40rem;
-  }
-}
-@media (min-width: 1280px) {
-  .header .hero__overlay {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
-    height: 60rem;
-  }
 }
 
 .footer {
@@ -551,6 +527,18 @@ textarea {
   align-items: center;
   width: 100%;
   height: 25rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .header .hero__overlay {
+    height: 40rem;
+  }
+}
+@media (min-width: 1280px) {
+  .header .hero__overlay {
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+    height: 60rem;
+  }
 }
 .header .hero__title {
   font-family: Avenir Next;
@@ -1010,6 +998,37 @@ textarea {
   border-radius: 50%;
   margin-top: 3em;
 }
+.comment-section .comment-form__button {
+  margin: 0em;
+  width: 100%;
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border: none;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comment-section .comment-form__button {
+    width: 40%;
+    align-self: flex-end;
+    margin-top: 1em;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section .comment-form__button {
+    width: 40%;
+    align-self: flex-end;
+    margin-top: 1em;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
 .comment-section .comment-form .form-section {
   display: flex;
   flex-direction: column;
@@ -1038,37 +1057,6 @@ textarea {
     line-height: 3.2rem;
     font-size: 1.6rem;
     color: #AFAFAF;
-  }
-}
-.comment-section .comment-form .form__field button {
-  margin: 0em;
-  width: 100%;
-  padding: 1rem 4rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #323232;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  border: none;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field button {
-    width: 40%;
-    align-self: flex-end;
-    margin-top: 1em;
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
-}
-@media (min-width: 1280px) {
-  .comment-section .comment-form .form__field button {
-    width: 40%;
-    align-self: flex-end;
-    margin-top: 1em;
-    font-size: 1.6rem;
-    font-weight: 400;
   }
 }
 .comment-section .comment-form .form__field input {
