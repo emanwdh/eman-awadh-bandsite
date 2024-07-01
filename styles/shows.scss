@@ -79,9 +79,10 @@
         }
 
         @include desktop {
-            margin-top: 8rem;
             width: 40%;    
             align-self:flex-end;
+            justify-self: center;
+            position: absolute;
         }
     }
 

@@ -402,6 +402,42 @@ textarea {
   color: #FFFFFF;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.6rem;
+  justify-content: center;
+  gap: 1.6em;
+  width: 100%;
+}
+.section__title {
+  font-family: Avenir Next;
+  font-weight: 700;
+  line-height: 3.2rem;
+  font-size: 2.4rem;
+  color: #000000;
+  padding-top: 0.8rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .section__title {
+    font-family: Avenir Next;
+    font-weight: 700;
+    line-height: 4.4rem;
+    font-size: 3.6rem;
+    color: #000000;
+  }
+}
+@media (min-width: 1280px) {
+  .section__title {
+    font-family: Avenir Next;
+    font-weight: 700;
+    line-height: 4.4rem;
+    font-size: 3.6rem;
+    color: #000000;
+    padding-top: 1.2rem;
+  }
+}
+
 /*Primary Colors*/
 /*Secondary Colors*/
 /*Font*/
@@ -501,8 +537,9 @@ textarea {
 }
 @media (min-width: 1280px) {
   .hero iframe {
-    margin-top: 8rem;
     width: 40%;
     align-self: flex-end;
+    justify-self: center;
+    position: absolute;
   }
 }/*# sourceMappingURL=shows.css.map */

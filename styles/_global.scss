@@ -342,3 +342,27 @@ textarea {
     }
     
 }
+
+.section {
+  display:flex;
+  flex-direction: column;
+  padding: 1.6rem 1.6rem;
+  justify-content:center;
+  gap: 1.6em;
+  width: 100%;
+
+  &__title {
+    @include font-type($bold, 3.2rem, 2.4rem, $Bandsite-DarkBlack);
+    padding-top: 0.8rem;
+
+    @include tablet {
+        @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
+    }
+
+    @include desktop {
+        @include font-type($bold,4.4rem, 3.6rem, $Bandsite-DarkBlack);
+        padding-top: 1.2rem;
+    }
+  }
+
+}
