@@ -49,11 +49,11 @@
         @include font-type ($regular,3.2rem, 1.6rem,$White);
 
         @include tablet {
-            @include font-type($regular, 4.4rem, 2.4rem,$White);
+            @include font-type($regular, 4.4rem, 2.6rem,$White);
         }
 
         @include desktop {
-            @include font-type($bold, 4.4rem, 2.4rem,$White);
+            @include font-type($regular, 4.4rem, 2.4rem,$White);
         }
     } 
 
@@ -61,7 +61,7 @@
         @include font-type ($demi ,4.4rem, 3.6rem,$White);
 
         @include tablet {
-            @include font-type($demi, 6rem, 6.8rem,$White);
+            @include font-type($demi, 7.5rem, 6.8rem,$White);
         }
 
         @include desktop {
@@ -74,12 +74,14 @@
 
         @include tablet {
             margin-top: 6rem;
+            width: 60%;
 
         }
 
         @include desktop {
             margin-top: 8rem;
-
+            width: 40%;    
+            align-self:flex-end;
         }
     }
 
