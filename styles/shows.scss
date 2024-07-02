@@ -12,6 +12,8 @@
 
     @include tablet {
         height: 60rem;
+        padding-right: 3.2rem;
+        padding-left: 3.2;
 
     }
 
@@ -33,11 +35,13 @@
 
         @include tablet {
             height: 60rem;
+            padding-right: 4rem;
+            padding-left: 4rem;
         }
 
         @include desktop {
-            padding-left: 3.6rem;
-            padding-right: 3.6rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
             height: 60rem;
         }
        
@@ -92,6 +96,10 @@
 .section {
     padding:0rem;
     gap: 0rem;
+
+    @include tablet {
+
+    }
 }
 
 .shows-section {
@@ -99,6 +107,18 @@
     font-weight: $demi;
     padding-left: 1.6rem;
     padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+
+    @include tablet {
+
+        padding-right: 4rem;
+        padding-left: 4rem;
+    
+      }
+  }
+
+  @include desktop {
+    
   }
 }
 
@@ -110,18 +130,69 @@
     border-bottom: 1px solid $Silver;
     padding: 1.6rem;
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.6rem 2.4rem;
+        height: 8rem;
+        margin: 0rem 2rem;
+
+    }
+
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.2rem;
+        align-items: center;
+        padding: 0rem; 
+        margin: 1.6rem;
+
+    }
+
     &__sub-group {
         display: flex;
         flex-direction: column;
         gap:0.3rem;
 
+        @include tablet {
+            justify-content: flex-start;
+            width: 20%;
+
+        }
+
         .sub-group__title {
             @include font-type($regular, 1.8rem, 1rem, $Silver);
             text-transform: uppercase;
 
+            @include tablet {
+                @include font-type($regular, 1.8rem, 1.1rem, $Silver);
+    
+            
+            }
+
+            @include desktop {
+                @include font-type($regular, 1.8rem, 1.1rem, $Silver);
+    
+            
+            }
+
         }
 
         .sub-group__info {
+
+            @include tablet {
+                @include font-type($regular, 1.8rem, 1.4rem, $Bandsite-DarkBlack);
+    
+            
+            }
+            
+            @include desktop {
+                @include font-type($regular, 1.8rem, 1.4rem, $Bandsite-DarkBlack);
+    
+            
+            }
 
 
             &--bold {
@@ -131,9 +202,23 @@
         }
     }
 
+    .button {
+        @include tablet {
+            width: 30%;
+            margin: 0rem;
+        }
+    }
 
 
+}
 
+.footer {
+    @include tablet {
+        margin-top: 1rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        
+    }
 }
 
 

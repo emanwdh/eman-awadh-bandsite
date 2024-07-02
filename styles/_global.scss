@@ -185,8 +185,6 @@ textarea {
       display: flex;
       align-items:center;
       color: $White;
-      padding-left: 1.6rem;
-      padding-right: 1.6rem;
       position: relative;
 
       &__overlay {
@@ -195,8 +193,7 @@ textarea {
           top: 0;
           left: 0;
           display: flex;
-          padding-left: 1.6rem;
-          padding-right: 1.6rem;
+         
 
         }
     
