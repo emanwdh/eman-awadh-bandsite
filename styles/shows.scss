@@ -90,10 +90,15 @@
 }   
 
 .section {
-    padding: 0rem;
+    padding:0rem;
+    gap: 0rem;
+}
+
+.shows-section {
   &__title{
     font-weight: $demi;
     padding-left: 1.6rem;
+    padding-top: 2.4rem;
   }
 }
 

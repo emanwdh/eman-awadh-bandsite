@@ -562,10 +562,13 @@ textarea {
 
 .section {
   padding: 0rem;
+  gap: 0rem;
 }
-.section__title {
+
+.shows-section__title {
   font-weight: 600;
   padding-left: 1.6rem;
+  padding-top: 2.4rem;
 }
 
 .show {
