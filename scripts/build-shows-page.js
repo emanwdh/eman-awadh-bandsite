@@ -13,7 +13,7 @@ function createShowCard() {
         showCard.classList.add("show");
         showSection.appendChild(showCard);
 
-            for(i=0; i<3; i++){
+            for(let i=0; i<3; i++){
                 var showSubGroup = document.createElement('div');
                 showSubGroup.classList.add("show__sub-group");
                 var subGroupTitle = document.createElement('p');

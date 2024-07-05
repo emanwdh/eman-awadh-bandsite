@@ -1,5 +1,6 @@
-@import "./partials/mixins";
-@import './partials/variables'; 
+@use "./partials/mixins" as *;
+@use './partials/variables' as *; 
+@use './fonts' as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -179,7 +180,7 @@ textarea {
       }
   }
 
-  & .hero{
+    .hero{
       background-size: cover;
       background-position: center;
       display: flex;
@@ -256,7 +257,7 @@ textarea {
             gap: 5rem;
         }
 
-        & .socials {
+          .socials {
             display: flex;
             gap: 3rem;
             

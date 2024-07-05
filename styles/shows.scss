@@ -1,8 +1,8 @@
 
-@import "../styles/partials/fonts";
-@import "../styles/partials/mixins";
-@import "global";
-@import "../styles/partials/variables";
+@use './partials/_fonts' as *;
+@use './partials/_mixins' as *;
+@use'./partials/_variables' as *;
+@use './global' as *;
 
 .hero {
 

@@ -1,5 +1,5 @@
-@use  "./_variables";
-@use "./_fonts";
+@use  "./_variables" as *;
+@use "./_fonts" as *;
 
 @mixin font-type ($weight,$line-height, $font-size, $color) {
             font-family: Avenir Next;
@@ -11,7 +11,7 @@
 
 
 @mixin tablet {
-    @media (min-width:768px) and (max-width:1279px) {
+    @media (min-width:768px) {
         @content;    
     }
 }
