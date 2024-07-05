@@ -1,5 +1,4 @@
-
-
+import BandSiteApi from "./band-site-api.js";
 
 
 var showSection = document.querySelector(".shows-section");
