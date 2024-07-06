@@ -585,8 +585,8 @@
 
        
             
-             &__name {
-                height: 4em;
+             .field__name {
+                height: 4rem;
                 padding: 0em 1em;
                 border: 1px $Silver solid;
                 border-radius: 0.5rem;
@@ -622,7 +622,7 @@
                  
             }
             
-            .comment-field {
+            .field__comment {
                padding: 1em 1em;
                border: 1px $Silver solid;
                border-radius: 0.5rem;
@@ -740,8 +740,22 @@
                 @include font-type($regular,3.2rem,1.6rem,$Silver);
             }
 
+     
         }
+    
+    /*.button--delete {
+        position: absolute;
+        bottom: 1rem;
+        right: 1.6rem;
+        background-color: $Alabaster;
+        color: $Bandsite-DarkBlack;
+
+    }*/
+    
+    
+    
     }
+
 
 }
 

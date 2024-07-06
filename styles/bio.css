@@ -502,6 +502,10 @@ input:focus, textarea:focus {
   border: none;
 }
 
+button:hover {
+  background-color: #000000;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -1141,8 +1145,8 @@ input:focus, textarea:focus {
     color: #AFAFAF;
   }
 }
-.comment-section .form__field__name {
-  height: 4em;
+.comment-section .form__field .field__name {
+  height: 4rem;
   padding: 0em 1em;
   border: 1px #AFAFAF solid;
   border-radius: 0.5rem;
@@ -1150,42 +1154,42 @@ input:focus, textarea:focus {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .comment-section .form__field__name {
+  .comment-section .form__field .field__name {
     height: 4em;
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .form__field__name {
+  .comment-section .form__field .field__name {
     height: 4em;
     font-size: 1.6rem;
   }
 }
-.comment-section .form__field__name::-moz-placeholder {
+.comment-section .form__field .field__name::-moz-placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .form__field__name::placeholder {
+.comment-section .form__field .field__name::placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
-  .comment-section .form__field__name::-moz-placeholder {
+  .comment-section .form__field .field__name::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .form__field__name::placeholder {
+  .comment-section .form__field .field__name::placeholder {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .form__field__name::-moz-placeholder {
+  .comment-section .form__field .field__name::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .form__field__name::placeholder {
+  .comment-section .form__field .field__name::placeholder {
     font-size: 1.6rem;
   }
 }
-.comment-section .form__field .comment-field {
+.comment-section .form__field .field__comment {
   padding: 1em 1em;
   border: 1px #AFAFAF solid;
   border-radius: 0.5rem;
@@ -1193,38 +1197,38 @@ input:focus, textarea:focus {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .comment-section .form__field .comment-field {
+  .comment-section .form__field .field__comment {
     height: 12rem;
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .form__field .comment-field {
+  .comment-section .form__field .field__comment {
     height: 12rem;
     font-size: 1.6rem;
   }
 }
-.comment-section .form__field .comment-field::-moz-placeholder {
+.comment-section .form__field .field__comment::-moz-placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .form__field .comment-field::placeholder {
+.comment-section .form__field .field__comment::placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
-  .comment-section .form__field .comment-field::-moz-placeholder {
+  .comment-section .form__field .field__comment::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .form__field .comment-field::placeholder {
+  .comment-section .form__field .field__comment::placeholder {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .form__field .comment-field::-moz-placeholder {
+  .comment-section .form__field .field__comment::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .form__field .comment-field::placeholder {
+  .comment-section .form__field .field__comment::placeholder {
     font-size: 1.6rem;
   }
 }
@@ -1235,6 +1239,14 @@ input:focus, textarea:focus {
   padding: 2rem 3rem;
   border-bottom: 1px solid #AFAFAF;
   position: relative;
+  /*.button--delete {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.6rem;
+      background-color: $Alabaster;
+      color: $Bandsite-DarkBlack;
+
+  }*/
 }
 @media (min-width: 768px) {
   .comment-section .comment {

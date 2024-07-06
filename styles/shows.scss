@@ -139,14 +139,20 @@
     padding: 1.6rem;
     width: 100%;
 
+&:hover {
+       
+    background-color: $Alabaster;
+
+}
+
     @include tablet {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
-        padding: 1.6rem 0rem;
-        height: 8rem;
-        margin: 1rem 2rem;
+        padding: 1.6rem 1.6rem;
+        height: 10rem;
+        margin: 0rem 2rem;
         width: 95%;
 
     }
@@ -157,9 +163,9 @@
         width: 50%;
         gap: 1.2rem;
         align-items: center;
-        padding: 0rem; 
-        margin: 1.6rem;
-        height: 8rem;
+        padding: 1.6rem; 
+        margin: 0rem;
+        height: 12rem;
 
     }
 
