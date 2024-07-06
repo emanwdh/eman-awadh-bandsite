@@ -71,50 +71,84 @@ async function displayComments () {
 displayComments();
 
 
+let inputField = document.querySelector("input");
+let commentField = document.querySelector("textarea");
+
+if(inputField.value !== "") {
+    inputField.classList.toggle("input-field--error", false);
+   
+
+}else if(commentField.value !== "") {
+    commentField.classList.toggle("input-field--error", false); 
+};
+
+
+
+
 async function addComment(event){ 
-    event.preventDefault();
-
-    let nameValue = nameInputElement.value;
-    let commentValue = commentInputElement.value;
-
-    let newComment = {"name": nameValue,"comment": commentValue};
-
-    BioInstance.postComments(newComment);
-
-    let commentArray = await BioInstance.getComments();
-    let newDate = commentArray[(commentArray.length-1)].timestamp;
-    let newDateString = new Date(newDate);
-
-    let newCommentContainer = document.createElement('div');
-    newCommentContainer.classList.add("comment");
-    commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
-
-    let newCommentUserImage = document.createElement('span');
-    newCommentUserImage.classList.add("comment__image");
-    newCommentContainer.appendChild(newCommentUserImage);
 
 
-    let newCommentUserData = document.createElement('div');
-    newCommentUserData.classList.add("info-group");
-    newCommentContainer.appendChild(newCommentUserData);
+    if (inputField.value === "" || commentField.value === "")  
+    {   
+        event.preventDefault();
 
-    let newCommentUserName = document.createElement('p');
-    newCommentUserName.classList.add("info-group__user");
-    newCommentUserData.appendChild(newCommentUserName);
-    newCommentUserName.textContent= nameValue;
+        if(inputField.value === "" ){
+        inputField.classList.toggle("input-field--error", true);
+        }
+        else if (commentField.value === ""){
+        commentField.classList.toggle("input-field--error", true);
+        }
 
-    let newCommentUserText = document.createElement('p');
-    newCommentUserText.classList.add("info-group__text");
-    newCommentUserData.appendChild(newCommentUserText);
-    newCommentUserText.textContent = commentValue;
 
-    let newCommentDate = document.createElement('p');
-    newCommentDate.classList.add("comment__date");
-    newCommentContainer.appendChild(newCommentDate);
-    newCommentDate.textContent = newDateString.toLocaleDateString();
+    }else {
 
-    event.target.reset();
+        inputField.classList.toggle("input-field--error", false);
+        commentField.classList.toggle("input-field--error", false); 
 
+        event.preventDefault();
+
+        let nameValue = nameInputElement.value;
+        let commentValue = commentInputElement.value;
+
+        let newComment = {"name": nameValue,"comment": commentValue};
+
+        BioInstance.postComments(newComment);
+
+        let commentArray = await BioInstance.getComments();
+        let newDate = commentArray[(commentArray.length-1)].timestamp;
+        let newDateString = new Date(newDate);
+
+        let newCommentContainer = document.createElement('div');
+        newCommentContainer.classList.add("comment");
+        commentSection.insertBefore(newCommentContainer,formElement.nextSibling);
+
+        let newCommentUserImage = document.createElement('span');
+        newCommentUserImage.classList.add("comment__image");
+        newCommentContainer.appendChild(newCommentUserImage);
+
+
+        let newCommentUserData = document.createElement('div');
+        newCommentUserData.classList.add("info-group");
+        newCommentContainer.appendChild(newCommentUserData);
+
+        let newCommentUserName = document.createElement('p');
+        newCommentUserName.classList.add("info-group__user");
+        newCommentUserData.appendChild(newCommentUserName);
+        newCommentUserName.textContent= nameValue;
+
+        let newCommentUserText = document.createElement('p');
+        newCommentUserText.classList.add("info-group__text");
+        newCommentUserData.appendChild(newCommentUserText);
+        newCommentUserText.textContent = commentValue;
+
+        let newCommentDate = document.createElement('p');
+        newCommentDate.classList.add("comment__date");
+        newCommentContainer.appendChild(newCommentDate);
+        newCommentDate.textContent = newDateString.toLocaleDateString();
+
+        event.target.reset();
+        
+    };
 
 
 };

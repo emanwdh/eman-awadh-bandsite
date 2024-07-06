@@ -1,6 +1,6 @@
-@use "./partials/mixins" as *;
-@use './partials/variables' as *; 
-@use './fonts' as *;
+@use "mixins" as *;
+@use 'variables' as *; 
+@use 'fonts' as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -84,6 +84,88 @@ textarea {
   font-size: 100%; 
   line-height: 1.15; 
   margin: 0; 
+}
+
+
+input {
+  padding: 0em 1em;
+  border: 1px $Silver solid;
+  border-radius: 0.5rem;
+  background-color: $Alabaster;
+  width: 100%;
+
+  @include tablet {
+      height: 4em;
+      font-size:1.6rem;
+  }
+
+  @include desktop{
+      height: 4em;
+      font-size:1.6rem;
+  }
+
+  &::placeholder {
+      color: $Bandsite-DarkBlack;
+      font-size: 1.3rem;
+
+      @include tablet {
+          font-size: 1.6rem;
+      }
+
+      @include desktop {
+          font-size: 1.6rem;
+      }
+
+  }
+
+
+
+   
+}
+
+textarea {
+ padding: 1em 1em;
+ border: 1px $Silver solid;
+ border-radius: 0.5rem;
+ background-color: $Alabaster;
+ width: 100%;
+
+ @include tablet {
+  height: 12rem;
+  font-size:1.6rem;
+}
+
+  @include desktop {
+  height: 12rem;
+  font-size:1.6rem;
+}
+
+
+ &::placeholder {
+  color: $Bandsite-DarkBlack;
+  font-size: 1.3rem;
+
+  @include tablet {
+      font-size: 1.6rem;
+  }
+
+  @include desktop {
+      font-size: 1.6rem;
+  }
+ }
+
+}
+
+
+
+input:focus,  textarea:focus {
+      outline: none;
+      border-color: $Bandsite-DarkBlack;
+}
+
+.input-field--error {
+    outline: none;
+    border-color: $errorRed;
 }
 
 .header {
@@ -378,5 +460,6 @@ textarea {
   margin-bottom: 1rem;
   font-weight: $demi;
   border: none;
+
 
 }

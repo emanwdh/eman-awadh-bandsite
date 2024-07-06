@@ -1,5 +1,5 @@
-@use  "./_variables" as *;
-@use "./_fonts" as *;
+@use  "variables" as *;
+@use "fonts" as *;
 
 @mixin font-type ($weight,$line-height, $font-size, $color) {
             font-family: Avenir Next;

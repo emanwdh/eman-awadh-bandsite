@@ -1,9 +1,6 @@
 /*Primary Colors*/
 /*Secondary Colors*/
 /*Font*/
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
 @font-face {
   font-family: "Avenir Next";
   src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
@@ -19,9 +16,6 @@
   src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
   font-weight: 700;
 }
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -56,7 +50,7 @@ ul li {
 ul li:hover, ul li:active {
   border-bottom: 0.3rem solid #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   ul li:hover, ul li:active {
     border-bottom: none;
   }
@@ -74,16 +68,16 @@ ul li a:hover,
 ul li a:active {
   color: #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   ul li a:hover,
-ul li a:active {
+  ul li a:active {
     border-bottom: 0.3rem solid #FFFFFF;
     padding-bottom: 3.5rem;
   }
 }
 @media (min-width: 1280px) {
   ul li a:hover,
-ul li a:active {
+  ul li a:active {
     border-bottom: 0.3rem solid #FFFFFF;
     padding-bottom: 3.5rem;
   }
@@ -101,6 +95,104 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+}
+
+input {
+  padding: 0em 1em;
+  border: 1px #AFAFAF solid;
+  border-radius: 0.5rem;
+  background-color: #FAFAFA;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  input {
+    height: 4em;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  input {
+    height: 4em;
+    font-size: 1.6rem;
+  }
+}
+input::-moz-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+input::placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  input::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  input::placeholder {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  input::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  input::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+textarea {
+  padding: 1em 1em;
+  border: 1px #AFAFAF solid;
+  border-radius: 0.5rem;
+  background-color: #FAFAFA;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  textarea {
+    height: 12rem;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  textarea {
+    height: 12rem;
+    font-size: 1.6rem;
+  }
+}
+textarea::-moz-placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+textarea::placeholder {
+  color: #000000;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  textarea::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  textarea::placeholder {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  textarea::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  textarea::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.input-field--error {
+  outline: none;
+  border-color: #D22D2D;
 }
 
 .header {
@@ -122,7 +214,7 @@ textarea {
   width: 100%;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav {
     flex-direction: row;
     justify-content: flex-start;
@@ -145,7 +237,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul {
     width: 40%;
     justify-content: center;
@@ -166,7 +258,7 @@ textarea {
   width: 50%;
   height: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul li {
     width: 30%;
   }
@@ -184,7 +276,7 @@ textarea {
   font-size: 1.4rem;
   color: #AFAFAF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul li a {
     position: absolute;
     top: 4rem;
@@ -219,7 +311,7 @@ textarea {
   padding: 1.6rem 1.6rem;
   gap: 4rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer {
     position: relative;
   }
@@ -239,7 +331,7 @@ textarea {
   color: #FFFFFF;
   padding-top: 0.8rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__title {
     font-family: Avenir Next;
     font-weight: 700;
@@ -263,7 +355,7 @@ textarea {
   flex-direction: column;
   gap: 2rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__socials {
     flex-direction: row;
     align-items: center;
@@ -287,7 +379,7 @@ textarea {
   max-width: 100%;
   max-height: 2.5rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__socials .socials {
     padding-top: 1.2rem;
   }
@@ -303,7 +395,7 @@ textarea {
   justify-content: space-between;
   gap: 3rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__contact {
     display: flex;
     flex-direction: row;
@@ -338,7 +430,7 @@ textarea {
   font-size: 1.3rem;
   color: #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__logo {
     position: absolute;
     right: 3rem;
@@ -376,7 +468,7 @@ textarea {
   color: #000000;
   padding-top: 0.8rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section__title {
     font-family: Avenir Next;
     font-weight: 700;
@@ -410,48 +502,6 @@ textarea {
   border: none;
 }
 
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
-  font-weight: 700;
-}
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
-  font-weight: 700;
-}
-/*Primary Colors*/
-/*Secondary Colors*/
-/*Font*/
 .header {
   background-color: #323232;
   display: flex;
@@ -471,7 +521,7 @@ textarea {
   width: 100%;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav {
     flex-direction: row;
     justify-content: flex-start;
@@ -494,7 +544,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul {
     width: 40%;
     justify-content: center;
@@ -515,7 +565,7 @@ textarea {
   width: 50%;
   height: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul li {
     width: 30%;
   }
@@ -533,7 +583,7 @@ textarea {
   font-size: 1.4rem;
   color: #AFAFAF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header__nav ul li a {
     position: absolute;
     top: 4rem;
@@ -558,7 +608,7 @@ textarea {
   padding-right: 1.6rem;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header .hero {
     height: 40rem;
   }
@@ -577,7 +627,7 @@ textarea {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header .hero__overlay {
     height: 40rem;
   }
@@ -596,7 +646,7 @@ textarea {
   font-size: 2.4rem;
   color: #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .header .hero__title {
     font-family: Avenir Next;
     font-weight: 700;
@@ -633,7 +683,7 @@ textarea {
   flex-direction: column;
   gap: 1.6rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section__body {
     padding: 2em 6em;
     display: flex;
@@ -655,7 +705,7 @@ textarea {
   height: 30%;
   flex-grow: 2;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section__image {
     height: 30%;
   }
@@ -673,7 +723,7 @@ textarea {
   color: #000000;
   padding-top: 0.8rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section__title {
     font-family: Avenir Next;
     font-weight: 700;
@@ -699,7 +749,7 @@ textarea {
   font-size: 1.4rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section .quote {
     font-family: Avenir Next;
     font-weight: 600;
@@ -725,7 +775,7 @@ textarea {
   font-size: 1.4rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section .quote__speaker {
     font-family: Avenir Next;
     font-weight: 600;
@@ -750,7 +800,7 @@ textarea {
   font-size: 1.4rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section__subtitle {
     font-family: Avenir Next;
     font-weight: 600;
@@ -774,7 +824,7 @@ textarea {
   text-align: left;
   gap: 1.6rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section .section__body .body {
     flex-direction: row;
   }
@@ -792,7 +842,7 @@ textarea {
   font-size: 1.3rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .section .section__body .body__text {
     font-family: Avenir Next;
     font-weight: 400;
@@ -836,7 +886,7 @@ textarea {
   transform: scale(1.05);
   z-index: 1;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .gallery-section__group {
     flex-direction: row;
     flex-wrap: wrap;
@@ -851,7 +901,7 @@ textarea {
     gap: 3.6rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .gallery-section__group img {
     width: 30%;
   }
@@ -869,7 +919,7 @@ textarea {
   padding: 1.6rem 1.6rem;
   gap: 4rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer {
     position: relative;
   }
@@ -889,7 +939,7 @@ textarea {
   color: #FFFFFF;
   padding-top: 0.8rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__title {
     font-family: Avenir Next;
     font-weight: 700;
@@ -913,7 +963,7 @@ textarea {
   flex-direction: column;
   gap: 2rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__socials {
     flex-direction: row;
     align-items: center;
@@ -937,7 +987,7 @@ textarea {
   max-width: 100%;
   max-height: 2.5rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__socials .socials {
     padding-top: 1.2rem;
   }
@@ -953,7 +1003,7 @@ textarea {
   justify-content: space-between;
   gap: 3rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__contact {
     display: flex;
     flex-direction: row;
@@ -988,7 +1038,7 @@ textarea {
   font-size: 1.3rem;
   color: #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .footer__logo {
     position: absolute;
     right: 3rem;
@@ -1016,7 +1066,7 @@ textarea {
 .comment-section__title {
   align-self: flex-start;
 }
-.comment-section .comment-form {
+.comment-section .form {
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -1024,31 +1074,27 @@ textarea {
   gap: 2rem;
   padding: 2rem 3rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form {
+@media (min-width: 768px) {
+  .comment-section .form {
     width: 80%;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form {
+  .comment-section .form {
     width: 40%;
     padding-top: 1rem;
     padding-left: 3rem;
     padding-right: 0rem;
   }
 }
-.comment-section .comment-form__user {
-  display: flex;
-  align-items: center;
-}
-.comment-section .comment-form__image {
+.comment-section .form__image {
   width: 5em;
   height: 5em;
   border-radius: 50%;
   margin-top: 3em;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form__button {
+@media (min-width: 768px) {
+  .comment-section .form__button {
     width: 40%;
     align-self: flex-end;
     margin-top: 1em;
@@ -1057,7 +1103,7 @@ textarea {
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form__button {
+  .comment-section .form__button {
     width: 40%;
     align-self: flex-end;
     margin-top: 1em;
@@ -1065,13 +1111,13 @@ textarea {
     font-weight: 400;
   }
 }
-.comment-section .comment-form .form-section {
+.comment-section .form__section {
   display: flex;
   flex-direction: column;
   gap: 2em;
   width: 90%;
 }
-.comment-section .comment-form .form__field {
+.comment-section .form__field {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1079,15 +1125,15 @@ textarea {
   gap: 0.8em;
   text-transform: uppercase;
 }
-.comment-section .comment-form .form__field label {
+.comment-section .form__field label {
   font-family: Avenir Next;
   font-weight: 600;
   line-height: 1.8rem;
   font-size: 1.3rem;
   color: #AFAFAF;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field label {
+@media (min-width: 768px) {
+  .comment-section .form__field label {
     font-family: Avenir Next;
     font-weight: 600;
     line-height: 3.2rem;
@@ -1095,7 +1141,7 @@ textarea {
     color: #AFAFAF;
   }
 }
-.comment-section .comment-form .form__field input {
+.comment-section .form__field__name {
   height: 4em;
   padding: 0em 1em;
   border: 1px #AFAFAF solid;
@@ -1103,102 +1149,82 @@ textarea {
   background-color: #FAFAFA;
   width: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field input {
+@media (min-width: 768px) {
+  .comment-section .form__field__name {
     height: 4em;
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form .form__field input {
+  .comment-section .form__field__name {
     height: 4em;
     font-size: 1.6rem;
   }
 }
-.comment-section .comment-form .form__field input::-moz-placeholder {
+.comment-section .form__field__name::-moz-placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .comment-form .form__field input:-ms-input-placeholder {
+.comment-section .form__field__name::placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .comment-form .form__field input::placeholder {
-  color: #000000;
-  font-size: 1.3rem;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field input::-moz-placeholder {
+@media (min-width: 768px) {
+  .comment-section .form__field__name::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .comment-form .form__field input:-ms-input-placeholder {
-    font-size: 1.6rem;
-  }
-  .comment-section .comment-form .form__field input::placeholder {
+  .comment-section .form__field__name::placeholder {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form .form__field input::-moz-placeholder {
+  .comment-section .form__field__name::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .comment-form .form__field input:-ms-input-placeholder {
-    font-size: 1.6rem;
-  }
-  .comment-section .comment-form .form__field input::placeholder {
+  .comment-section .form__field__name::placeholder {
     font-size: 1.6rem;
   }
 }
-.comment-section .comment-form .form__field textarea {
+.comment-section .form__field .comment-field {
   padding: 1em 1em;
   border: 1px #AFAFAF solid;
   border-radius: 0.5rem;
   background-color: #FAFAFA;
   width: 100%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field textarea {
+@media (min-width: 768px) {
+  .comment-section .form__field .comment-field {
     height: 12rem;
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form .form__field textarea {
+  .comment-section .form__field .comment-field {
     height: 12rem;
     font-size: 1.6rem;
   }
 }
-.comment-section .comment-form .form__field textarea::-moz-placeholder {
+.comment-section .form__field .comment-field::-moz-placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .comment-form .form__field textarea:-ms-input-placeholder {
+.comment-section .form__field .comment-field::placeholder {
   color: #000000;
   font-size: 1.3rem;
 }
-.comment-section .comment-form .form__field textarea::placeholder {
-  color: #000000;
-  font-size: 1.3rem;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .comment-section .comment-form .form__field textarea::-moz-placeholder {
+@media (min-width: 768px) {
+  .comment-section .form__field .comment-field::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .comment-form .form__field textarea:-ms-input-placeholder {
-    font-size: 1.6rem;
-  }
-  .comment-section .comment-form .form__field textarea::placeholder {
+  .comment-section .form__field .comment-field::placeholder {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .comment-section .comment-form .form__field textarea::-moz-placeholder {
+  .comment-section .form__field .comment-field::-moz-placeholder {
     font-size: 1.6rem;
   }
-  .comment-section .comment-form .form__field textarea:-ms-input-placeholder {
-    font-size: 1.6rem;
-  }
-  .comment-section .comment-form .form__field textarea::placeholder {
+  .comment-section .form__field .comment-field::placeholder {
     font-size: 1.6rem;
   }
 }
@@ -1210,7 +1236,7 @@ textarea {
   border-bottom: 1px solid #AFAFAF;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .comment-section .comment {
     width: 80%;
     padding-bottom: 2rem;
@@ -1227,7 +1253,7 @@ textarea {
   gap: 1rem;
   width: 80%;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .comment-section .comment .info-group {
     gap: 2rem;
   }
@@ -1239,7 +1265,7 @@ textarea {
   font-size: 1.3rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .comment-section .comment .info-group__user {
     font-family: Avenir Next;
     font-weight: 600;
@@ -1264,7 +1290,7 @@ textarea {
   font-size: 1.3rem;
   color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .comment-section .comment .info-group__text {
     font-family: Avenir Next;
     font-weight: 400;
@@ -1298,7 +1324,7 @@ textarea {
   right: 1.6rem;
   top: 0rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .comment-section .comment__date {
     right: 0rem;
     top: 1rem;

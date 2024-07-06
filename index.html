@@ -57,16 +57,16 @@
     <section class = "section comment-section">
         <h2 class = "section__title comment-section__title">Join the Conversation</h2>
         <form class = "comment-form form">
-            <img src = "Assets/Images/Mohan-muruge.jpg" class = "comment-form__image">
-            <div class = "form-section">
-                <div class = "comment-form__name-field form__field">
-                    <label for = "name-input" >Name</label>
-                    <input placeholder = "Enter your name" class = "input-field" id = "name-input" name = "nameIinput" required>
+            <img src = "Assets/Images/Mohan-muruge.jpg" class = "form__image">
+            <div class = "form__section">
+                <div class = "comment-form__name-field form__field field">
+                    <label for = "name-input" class = "field__label">Name</label>
+                    <input placeholder = "Enter your name" class = "input-field field__name" id = "name-input" name = "nameInput">
                 </div>
-                <div class = "comment-form__comment-field form__field">
-                    <label for = "comment-input">Comment</label>
-                    <textarea placeholder = "Add a new comment" class = "input-field" id = "comment-input" name = "commentInput"rows = "8" required></textarea>
-                    <button type = "submit" class = "comment-form__button button">Comment</button>
+                <div class = "comment-form__comment-field form__field field">
+                    <label for = "comment-input" class = "field__label">Comment</label>
+                    <textarea placeholder = "Add a new comment" class = "input-field field__comment" id = "comment-input" name = "commentInput"rows = "8"></textarea>
+                    <button type = "submit" class = "form__button button">Comment</button>
                 </div>
             </div>
         </form>

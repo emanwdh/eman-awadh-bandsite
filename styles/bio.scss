@@ -1,7 +1,7 @@
-@use './partials/_fonts' as *;
-@use './partials/_mixins' as *;
-@use'./partials/_variables' as *;
-@use './global' as *;
+@use 'partials/fonts' as *;
+@use 'partials/mixins' as *;
+@use'partials/variables' as *;
+@use 'partials/global' as *;
 
 
 .header {
@@ -502,7 +502,7 @@
         align-self: flex-start;
     }
 
-    .comment-form {
+    .form {
         display: flex;
         align-items:flex-start;
         width: 100%;
@@ -522,12 +522,7 @@
             padding-right: 0rem;
         }
 
-        &__user {
-            display: flex;
-            align-items: center;
-
-        }
-
+      
         &__image {
                 width: 5em;
                 height: 5em;
@@ -558,7 +553,7 @@
             }
         
 
-        .form-section {
+        &__section {
                 display:flex;
                 flex-direction: column;
                 gap: 2em;
@@ -568,7 +563,7 @@
     
         
 
-          .form__field {
+          &__field {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -590,7 +585,7 @@
 
        
             
-             & input {
+             &__name {
                 height: 4em;
                 padding: 0em 1em;
                 border: 1px $Silver solid;
@@ -627,7 +622,7 @@
                  
             }
             
-            & textarea {
+            .comment-field {
                padding: 1em 1em;
                border: 1px $Silver solid;
                border-radius: 0.5rem;
