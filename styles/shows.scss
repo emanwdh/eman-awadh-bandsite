@@ -2,7 +2,6 @@
 @use 'partials/fonts' as *;
 @use 'partials/mixins' as *;
 @use'partials/variables' as *;
-@use 'partials/global' as *;
 
 .hero {
 
@@ -274,7 +273,7 @@
 .show--selected {
 
     background-color:$Mercury;
-    
+
     &:hover {
         background-color: $Mercury;
     }

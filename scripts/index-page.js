@@ -103,6 +103,16 @@ async function displayComments () {
         let oldDateStringValue = new Date(oldDateValue);
         oldCommentDate.textContent = relativeDate(oldDateStringValue);
 
+        let oldCommentDeleteButton = document.createElement('button');
+        oldCommentDeleteButton.classList.add("button--delete");
+        oldCommentContainer.appendChild(oldCommentDeleteButton);
+        oldCommentDeleteButton.innerText = "Delete";
+        
+        oldCommentDeleteButton.addEventListener("click", ()=> {
+          BioInstance.deleteComment(commentArray[i].id);
+          oldCommentContainer.remove();
+
+        });
         
 
     };
@@ -189,6 +199,12 @@ async function addComment(event){
         newCommentDate.classList.add("comment__date");
         newCommentContainer.appendChild(newCommentDate);
         newCommentDate.textContent = relativeDate(newDate);
+
+
+        let newCommentDeleteButton = document.createElement('button');
+        newCommentDeleteButton.classList.add("button--delete");
+        newCommentContainer.appendChild(oldCommentDeleteButton);
+        newCommentDeleteButton.innerText = "Delete";
 
         event.target.reset();
         

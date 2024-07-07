@@ -1,7 +1,6 @@
 @use 'partials/fonts' as *;
 @use 'partials/mixins' as *;
 @use'partials/variables' as *;
-@use 'partials/global' as *;
 
 
 .header {
@@ -267,7 +266,6 @@
     }
 
     
-      .section__body {
     
          .body {
             display: flex;
@@ -298,7 +296,7 @@
         
         }
     }
-}
+
 
 .gallery-section {
     background-color: $Alabaster;
@@ -583,80 +581,80 @@
             }
            
 
-       
+        }  
             
-             .field__name {
-                height: 4rem;
-                padding: 0em 1em;
-                border: 1px $Silver solid;
-                border-radius: 0.5rem;
-                background-color: $Alabaster;
-                width: 100%;
+    .field__name {
+        height: 4rem;
+        padding: 0em 1em;
+        border: 1px $Silver solid;
+        border-radius: 0.5rem;
+        background-color: $Alabaster;
+        width: 100%;
+        font-size: 1.3rem;
 
-                @include tablet {
+            @include tablet {
                     height: 4em;
                     font-size:1.6rem;
                 }
 
-                @include desktop{
+            @include desktop{
                     height: 4em;
                     font-size:1.6rem;
                 }
               
-                &::placeholder {
-                    color: $Bandsite-DarkBlack;
-                    font-size: 1.3rem;
+        &::placeholder {
+        color: $Bandsite-DarkBlack;
+        font-size: 1.3rem;
 
-                    @include tablet {
-                        font-size: 1.6rem;
-                    }
-
-                    @include desktop {
-                        font-size: 1.6rem;
-                    }
-
+            @include tablet {
+                    font-size: 1.6rem;
                 }
 
-        
+            @include desktop {
+                    font-size: 1.6rem;
+                }
 
+            }
                  
-            }
+    }
             
-            .field__comment {
-               padding: 1em 1em;
-               border: 1px $Silver solid;
-               border-radius: 0.5rem;
-               background-color: $Alabaster;
-               width: 100%;
+    .field__comment {
+        padding: 1em 1em;
+        border: 1px $Silver solid;
+        border-radius: 0.5rem;
+        background-color: $Alabaster;
+        width: 100%;
+        font-size: 1.3rem;
 
-               @include tablet {
+            @include tablet {
                 height: 12rem;
                 font-size:1.6rem;
             }
 
-                @include desktop {
+            @include desktop {
                 height: 12rem;
                 font-size:1.6rem;
             }
 
 
-               &::placeholder {
-                color: $Bandsite-DarkBlack;
-                font-size: 1.3rem;
+        &::placeholder {
+            color: $Bandsite-DarkBlack;
+            font-size: 1.3rem;
 
-                @include tablet {
+            @include tablet {
                     font-size: 1.6rem;
-                }
+            }
 
-                @include desktop {
+            @include desktop {
                     font-size: 1.6rem;
-                }
-               }
             }
         }
+    }
+
+}
               
 
-    }
+    
 
 
     .comment {
@@ -743,14 +741,23 @@
      
         }
     
-    /*.button--delete {
+    .button--delete {
         position: absolute;
         bottom: 1rem;
         right: 1.6rem;
         background-color: $Alabaster;
         color: $Bandsite-DarkBlack;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
 
-    }*/
+        &:hover {
+            background-color: $BandsiteBlack;
+            color: $White;
+        }
+
+    }
     
     
     

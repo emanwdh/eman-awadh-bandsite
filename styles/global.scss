@@ -1,6 +1,6 @@
-@use "mixins" as *;
-@use 'variables' as *; 
-@use 'fonts' as *;
+@use "./partials/mixins" as *;
+@use './partials/variables' as *; 
+@use './partials/fonts' as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -449,7 +449,7 @@ input:focus,  textarea:focus {
 }
 
 .button {
-  margin: 1rem 0rem 0rem;
+  margin: 1rem 0rem 1rem;
   width: 100%;
   padding: 1.7rem 4rem;
   font-size: 2rem;
@@ -457,13 +457,14 @@ input:focus,  textarea:focus {
   color: $White;
   background-color: $BandsiteBlack;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
   font-weight: $demi;
   border: none;
 
 
 }
 
-button:hover {
+.button:hover {
     background-color: $Bandsite-DarkBlack;
 }
+
+

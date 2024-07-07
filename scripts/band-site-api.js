@@ -36,6 +36,17 @@ export default class BandSiteApi {
 
     };
 
+    async deleteComment(commentID) {
+        try {
+            await axios.delete(`${this.baseURL}comments/${commentID}?api_key=<${this.apiKey}>`)
+            console.log("successfully deleted!");
+
+        } catch(error) {
+            console.log(error);
+
+        }
+    };
+
     async getShows() {
         try {
             const result = await axios.get(`${this.baseURL}showdates?api_key=<${this.apiKey}>`)
