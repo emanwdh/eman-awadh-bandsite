@@ -102,6 +102,7 @@
     display: flex;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
+    position: relative;
 
     @include desktop {
         align-items: center;
@@ -131,6 +132,7 @@
 }
 
 
+
 .show {
     display: flex;
     flex-direction: column;
@@ -139,11 +141,15 @@
     padding: 1.6rem;
     width: 100%;
 
+
+
+
 &:hover {
        
     background-color: $Alabaster;
 
 }
+
 
     @include tablet {
         flex-direction: row;
@@ -264,6 +270,41 @@
     }
 }
 
+
+.show--selected {
+ 
+
+        @include tablet { 
+            background-color:$Mercury;
+
+            &:hover {
+                background-color: $Mercury;
+            }
+    
+          
+            
+        }
+    
+    
+        @include desktop {
+            background-color:$Mercury;
+
+            &:hover {
+                background-color: $Mercury;
+            }
+    
+        }
+    
+    
+}
+
+.section--overlay {
+    background-color: rgba(50, 50, 50, 0.50);
+    position: absolute;
+    top: 0; 
+    left: 0;
+
+}
 
 
   

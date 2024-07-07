@@ -621,6 +621,7 @@ button:hover {
   display: flex;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  position: relative;
 }
 @media (min-width: 1280px) {
   .shows-section {
@@ -781,4 +782,28 @@ button:hover {
   .footer__logo {
     right: 4rem;
   }
+}
+
+@media (min-width: 768px) {
+  .show--selected {
+    background-color: #E1E1E1;
+  }
+  .show--selected:hover {
+    background-color: #E1E1E1;
+  }
+}
+@media (min-width: 1280px) {
+  .show--selected {
+    background-color: #E1E1E1;
+  }
+  .show--selected:hover {
+    background-color: #E1E1E1;
+  }
+}
+
+.section--overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=shows.css.map */

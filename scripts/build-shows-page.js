@@ -1,11 +1,15 @@
 import BandSiteApi from "./band-site-api.js";
 
+//declare variables 
+
+
 const ShowsInstance  = new BandSiteApi;
 
 const showSection = document.querySelector(".shows-section");
+const allButtons = document.querySelectorAll(".button");
+
 
 async function createShows() {
-
 
     let showsArray = await ShowsInstance.getShows();
     const showSection = document.querySelector(".shows-section");
@@ -15,7 +19,7 @@ async function createShows() {
             showCard.classList.add("show");
             showSection.appendChild(showCard);
 
-                    for(let i=0; i<3; i++){
+                    for(let x=0; x<3; x++){
                         let showSubGroup = document.createElement('div');
                         showSubGroup.classList.add("show__sub-group");
                         let subGroupTitle = document.createElement('p');
@@ -26,20 +30,26 @@ async function createShows() {
                         showSubGroup.append(subGroupTitle,subGroupInfo);
                 
                     };
-            
+                
+
+
+    
 
             let showCardButton = document.createElement('button');
             showCardButton.classList.add("button");
             showCard.appendChild(showCardButton);
+                    
+            const allShowCards = document.querySelectorAll(".show");
+            const allButtons = document.querySelectorAll(".button");
 
-      
 
-
-
-
-    const allButtons = document.querySelectorAll(".button");
-    const allShowCards = document.querySelectorAll(".show");
-    
+          
+                allShowCards[i].addEventListener("click", (event)=> {
+                        document.querySelector(".show--selected")?.classList.remove("show--selected");
+                        event.currentTarget.classList.add("show--selected");
+                    }
+                );      
+                    
 
             allShowCards[i].querySelectorAll(".sub-group__title").item(0).textContent = "date";
             let dateMS = showsArray[i].date;
@@ -54,10 +64,11 @@ async function createShows() {
 
         };
 
+    
+        
+
     };
 
+  
  createShows();
-
-
-
 
