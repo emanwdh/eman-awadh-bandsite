@@ -272,39 +272,16 @@
 
 
 .show--selected {
- 
 
-        @include tablet { 
-            background-color:$Mercury;
-
-            &:hover {
-                background-color: $Mercury;
-            }
+    background-color:$Mercury;
     
-          
-            
-        }
-    
-    
-        @include desktop {
-            background-color:$Mercury;
-
-            &:hover {
-                background-color: $Mercury;
-            }
-    
-        }
+    &:hover {
+        background-color: $Mercury;
+    }
     
     
 }
 
-.section--overlay {
-    background-color: rgba(50, 50, 50, 0.50);
-    position: absolute;
-    top: 0; 
-    left: 0;
-
-}
 
 
   
