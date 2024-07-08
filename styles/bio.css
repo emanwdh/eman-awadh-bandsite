@@ -4,16 +4,19 @@
 @font-face {
   font-family: "Avenir Next";
   src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
+  src: url("../Assets/Font/Alternative-files/AvenirNextLTPro.ttf") format "truetype";
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
   src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
+  src: url("../Assets/Font/Alternative-files/AvenirNextLTProDemi.ttf") format "truetype";
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next";
   src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
+  src: url("../Assets/Font/Alternative-files/AvenirNextLTProBold.ttf") format "truetype";
   font-weight: 700;
 }
 .header {
@@ -866,7 +869,7 @@
   position: absolute;
   bottom: 1rem;
   right: 1.6rem;
-  background-color: #FAFAFA;
+  background-color: #D22D2D;
   color: #000000;
   border: none;
   border-radius: 0.5rem;
@@ -874,6 +877,21 @@
   text-transform: uppercase;
 }
 .comment-section .comment .button--delete:hover {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.comment-section .comment .button--like {
+  position: absolute;
+  top: 1.3rem;
+  right: 12rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+.comment-section .comment .button--like:hover {
   background-color: #323232;
   color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */

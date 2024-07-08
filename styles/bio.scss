@@ -745,7 +745,7 @@
         position: absolute;
         bottom: 1rem;
         right: 1.6rem;
-        background-color: $Alabaster;
+        background-color: $errorRed;
         color: $Bandsite-DarkBlack;
         border: none;
         border-radius: 0.5rem;
@@ -758,6 +758,26 @@
         }
 
     }
+
+    .button--like{
+        position: absolute;
+        top: 1.3rem;
+        right: 12rem;
+        background-color: $White;
+        color: $Bandsite-DarkBlack;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+
+
+        &:hover {
+            background-color: $BandsiteBlack;
+            color: $White;
+        }
+    
+    }
+
     
     
     

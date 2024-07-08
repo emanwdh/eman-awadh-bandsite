@@ -47,6 +47,17 @@ export default class BandSiteApi {
         }
     };
 
+    async addLike (commentID, likeCount) {
+        try {
+            await axios.put(`${this.baseURL}comments/${commentID}/like?api_key=<${this.apiKey}>`, {likes: likeCount});
+            console.log("successfully liked!");
+
+        } catch(error) {
+            console.log(error);
+
+        }
+    };
+
     async getShows() {
         try {
             const result = await axios.get(`${this.baseURL}showdates?api_key=<${this.apiKey}>`)

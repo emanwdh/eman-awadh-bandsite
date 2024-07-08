@@ -1,10 +1,5 @@
  import BandSiteApi from "./band-site-api.js";
 
- //one function to display commments 
- // one function (event handler) to post comment and display comments 
-
-
-
 //declare DOM Element Selector variables 
 
     const commentContainer = document.querySelector(".comment");
@@ -109,15 +104,19 @@ async function displayComments () {
         oldCommentDeleteButton.innerText = "Delete";
         
         oldCommentDeleteButton.addEventListener("click", ()=> {
-          BioInstance.deleteComment(commentArray[i].id);
-          oldCommentContainer.remove();
+        BioInstance.deleteComment(commentArray[i].id);
+        oldCommentContainer.remove();
 
         });
+
+
+
+
+
+       
         
 
     };
-
-    console.log(commentArray);
 
 
 
@@ -170,7 +169,8 @@ async function addComment(event){
         BioInstance.postComments(newComment);
 
         let commentArray = await BioInstance.getComments();
-        let newDate = commentArray[(commentArray.length-1)].timestamp;
+        let newDate = new Date ();
+        let newDateMS = newDate.getTime();
 
         let newCommentContainer = document.createElement('div');
         newCommentContainer.classList.add("comment");
@@ -198,13 +198,14 @@ async function addComment(event){
         let newCommentDate = document.createElement('p');
         newCommentDate.classList.add("comment__date");
         newCommentContainer.appendChild(newCommentDate);
-        newCommentDate.textContent = relativeDate(newDate);
+        newCommentDate.textContent = relativeDate(newDateMS);
 
 
         let newCommentDeleteButton = document.createElement('button');
         newCommentDeleteButton.classList.add("button--delete");
-        newCommentContainer.appendChild(oldCommentDeleteButton);
+        newCommentContainer.appendChild(newCommentDeleteButton);
         newCommentDeleteButton.innerText = "Delete";
+      
 
         event.target.reset();
         

@@ -4,6 +4,7 @@
 @font-face {
     font-family: 'Avenir Next';
     src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
+    src: url("../Assets/Font/Alternative-files/AvenirNextLTPro.ttf") format ("truetype");
     font-weight: $regular; 
 }
 
@@ -11,11 +12,13 @@
 @font-face {
     font-family: 'Avenir Next';
     src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
+    src: url("../Assets/Font/Alternative-files/AvenirNextLTProDemi.ttf") format ("truetype");
     font-weight: $demi; 
 }
 
 @font-face {
     font-family: 'Avenir Next';
     src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
+    src: url("../Assets/Font/Alternative-files/AvenirNextLTProBold.ttf") format ("truetype");
     font-weight: $bold; 
 }
